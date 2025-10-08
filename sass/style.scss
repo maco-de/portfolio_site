@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@use "foundation/reset";
+@use "foundation/base";
+@use "foundation/variables";
+@use "foundation/mixin";
+@use "foundation/animations";
+
+@use "layout/l-header";
+@use "layout/l-footer";
+
+@use "component/c-button";
+
+@use "pages/front-page";
+@use "pages/about";
+@use "pages/news";
+@use "pages/works";
+@use "pages/contact";

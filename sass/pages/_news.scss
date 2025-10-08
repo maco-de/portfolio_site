@@ -1,0 +1,70 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.news_flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include mq {
+        flex-direction: column-reverse;
+    }
+}
+
+.news_archive_box {
+    padding: 80px 50px 50px;
+    width: 80%;
+    @include mq {
+        padding: 50px 0 0 0;
+        width: 100%;
+    }
+}
+
+.news_archive_ttl {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.news_archive_list li {
+    font-size: 16px;
+    margin: 0 0 15px 10px;
+}
+
+.news_sidebar {
+    padding: 80px 20px 0;
+    @include mq {
+        padding: 50px 0 0;
+    }
+}
+
+.news_box {
+    text-align: left;
+    border-bottom: #bebebe solid 1px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.news_box:first-child {
+    padding-top: 0;
+}
+
+.news_box:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.news_box time {
+    display: block;
+}
+
+.news_box p {
+    margin-top: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    border-bottom: solid 1px transparent;
+}
+
+.news_box:hover p {
+    color: rgb(134, 157, 171, 0.8);
+    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+}

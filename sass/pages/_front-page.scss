@@ -1,0 +1,527 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+// スタート
+
+.home__start {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9000;
+    h1 {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        color: $color-text;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 9999;
+        font-size: clamp(3.125rem, 2rem + 4.8vw, 5rem);
+        font-weight: 700;
+        @include mq {
+            width: 90%;
+            text-align: center;
+        }
+    }
+}
+
+// メインヴィジュアル
+
+.home__mv {
+    background-color: #fff;
+    position: relative;
+    ::before {
+        content: "";
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        inset: 0;
+        animation: top_main_fade 1s forwards;
+        z-index: 110;
+        animation-delay: 4s;
+    }
+    &__title {
+        font-size: 10px;
+        max-width: 1000px;
+        margin: 0 auto 100px;
+        z-index: 101;
+        position: relative;
+        padding: 10px 0 0 2%;
+        @include mq {
+            padding: 60px 25px 0;
+            margin: 0 auto 40px;
+            z-index: 0;
+            height: 40px;
+        }
+    }
+    &__body {
+        display: flex;
+        max-width: 1600px;
+        justify-content: center;
+        padding: 0 1% 80px;
+        margin: 0 auto;
+        @include mq {
+            flex-direction: column-reverse;
+            padding: 0 0 20px;
+        }
+        &__text {
+            position: relative;
+            @include mq {
+                width: 90%;
+                margin: 0 auto;
+            }
+            p {
+                font-size: clamp(0.875rem, 0.818rem + 0.24vw, 1rem);
+                margin: 0 auto;
+                width: fit-content;
+                color: $color-text;
+                line-height: 2;
+                background-color: rgb(255, 255, 255, 0.8);
+                letter-spacing: 5px;
+                z-index: 50;
+                height: auto;
+                position: relative;
+                padding: 20px 0;
+                white-space: nowrap;
+            }
+        }
+        &__img {
+            width: 55%;
+            overflow: hidden;
+            border-radius: 40px;
+            @include mq {
+                width: 85%;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+// アバウト
+
+.home__about {
+    padding: 40px 0 50px;
+    background-color: $color-sub;
+    text-align: right;
+    @include mq {
+        margin: 0 auto;
+        padding: 20px 0 10px;
+    }
+    & container {
+        margin: 50px auto;
+    }
+    &__ttl {
+        max-width: 1000px;
+        margin: 0 auto;
+        & p {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    }
+    &__text {
+        max-width: 1000px;
+        text-align: left;
+        margin: 50px auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 70px;
+        @include mq {
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            line-height: 1.7;
+            padding: 30px 15px;
+            margin: 50px auto;
+        }
+        & p {
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            line-height: 1.8;
+        }
+    }
+}
+
+// お知らせ
+
+.home__news {
+    padding: 40px 0 80px;
+    background-color: $color-sub;
+    text-align: right;
+    @include mq {
+        padding: 40px 0;
+    }
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include mq {
+            flex-direction: column;
+            position: relative;
+        }
+        &__ttl {
+            padding: 5px 10px;
+            font-size: clamp(1rem, 0.85rem + 0.64vw, 1.25rem);
+            margin: 30px 0 70px;
+            display: inline-block;
+            text-align: center;
+            @include mq {
+                margin: 30px 0 50px;
+            }
+            & p {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+                letter-spacing: 2px;
+            }
+            &__button {
+                font-size: 16px;
+                @include mq {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, 0) !important;
+                    bottom: 20px;
+                }
+            }
+        }
+        &__post {
+            background-color: #fff;
+            border-radius: 70px;
+            width: 70%;
+            padding: 50px;
+            @include mq {
+                width: 100%;
+                padding: 30px 30px 100px;
+            }
+        }
+    }
+}
+
+// サービス
+
+.home__service {
+    background-color: $color-sub;
+    text-align: left;
+    position: relative;
+    @include mq {
+        margin: 0 auto;
+    }
+    &__bg {
+        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+        @include mq {
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+        }
+        &::after {
+            content: "";
+            background-image: url(../img/pc.jpg);
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+            @include mq {
+                background-image: url(../img/pc_sp.jpg);
+            }
+        }
+    }
+    &__ttl {
+        text-align: right;
+        margin-top: 100px;
+        @include mq {
+            margin-top: 60px;
+        }
+        & h2 {
+            color: #ffffffd9;
+            @include mq {
+                padding-top: 30px;
+            }
+        }
+        & p {
+            color: #ffffffd9;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0 100px;
+        @include mq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0 60px;
+        }
+        &__item1,
+        &__item2,
+        &__item3 {
+            padding: 20px;
+            width: 33%;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 70px;
+            @include mq {
+                width: 90%;
+                padding: 20px;
+                margin: 20px 15px;
+            }
+        }
+        &__item1 img {
+            display: block;
+            margin: 25px auto;
+            width: 35%;
+            @include mq {
+                margin: 30px auto;
+                width: 22%;
+            }
+        }
+        &__item2 {
+            margin: 25px 10px 25px;
+            @include mq {
+                margin: 20px 15px;
+            }
+            & img {
+                display: block;
+                margin: 30px auto;
+                width: 28%;
+                @include mq {
+                    margin: 33px auto;
+                    width: 30%;
+                }
+            }
+        }
+        &__item3 {
+            margin: 50px 10px 50px;
+            @include mq {
+                margin: 20px 15px;
+            }
+            & img {
+                display: block;
+                margin: 25px auto;
+                width: 30%;
+                @include mq {
+                    margin: 35px auto;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+// ご依頼の流れ
+
+.home__flow {
+    padding: 80px 0 70px;
+    margin-top: -1px;
+    background-color: $color-sub;
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+    @include mq {
+        padding: 30px 0 70px;
+        clip-path: polygon(100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
+    }
+    &__ttl {
+        margin: 0 0 70px;
+        text-align: center;
+        & p {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    }
+    &__ttl2 {
+        margin: 120px 0 70px;
+        text-align: center;
+        & p {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    }
+    &__list {
+        max-width: 1000px;
+        text-align: left;
+        margin: 50px auto;
+        padding: 50px 70px;
+        background-color: #fff;
+        border-radius: 70px;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        @include mq {
+            padding: 50px 20px;
+            font-size: 16px;
+        }
+        & p {
+            font-size: 16px;
+            margin-top: 10px;
+            @include mq {
+                font-size: 14px;
+            }
+            &:first-child {
+                text-align: center;
+                font-size: 20px;
+                margin-bottom: 20px;
+                @include mq {
+                    font-size: 16px;
+                }
+            }
+        }
+        & dl {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        & dt {
+            width: 75%;
+            padding: 15px 0 15px 25px;
+            border-bottom: solid 2px $color-main;
+            @include mq {
+                width: 100%;
+                border-bottom: none;
+                padding: 10px 0 5px 15px;
+            }
+            &:first-child {
+                @include mq {
+                    border-top: solid 2px $color-main;
+                }
+            }
+            &:first-child,
+            &:first-child + dd {
+                border-top: solid 2px $color-main;
+                @include mq {
+                    border-top: none;
+                }
+            }
+        }
+        & dd {
+            width: 25%;
+            text-align: right;
+            padding: 15px 25px;
+            border-bottom: solid 2px $color-main;
+            @include mq {
+                width: 100%;
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+
+// 制作実績
+
+.home__works {
+    padding: 0 0 20px;
+    @include mq {
+        padding: 50px 0 60px;
+    }
+    &::after {
+        content: "";
+        background-image: url(../img/diary.jpg);
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        @include mq {
+            background-image: url(../img/diary_sp.jpg);
+        }
+    }
+    &__ttl {
+        padding: 80px 0 0;
+        color: #ffffffd9;
+        margin-left: 2%;
+        @include mq {
+            padding: 0;
+        }
+        & h2 {
+            color: #ffffffd9;
+            text-align: left;
+        }
+        & p {
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            color: #ffffffd9;
+        }
+    }
+    &__body {
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq {
+            flex-direction: column;
+        }
+        &__item {
+            position: relative;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 30%;
+            height: 300px;
+            padding: 10px;
+            border: #dddddd solid 1px;
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+            overflow: hidden;
+            @include mq {
+                width: 90%;
+                margin: 15px;
+            }
+            & p {
+                position: absolute;
+                background-color: rgb(255, 255, 255, 0.8);
+                width: 100%;
+                bottom: 0;
+                text-align: center;
+                padding: 5px 0;
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin: 0 auto;
+                transition: transform 0.6s ease;
+            }
+            &:hover &__img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// 404ページ
+
+.page_404 {
+    text-align: center;
+    font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
+    margin-top: 250px;
+    @include mq {
+        margin-top: 150px;
+    }
+    & h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}

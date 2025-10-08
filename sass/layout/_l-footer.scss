@@ -1,0 +1,70 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+/* フッター */
+
+.footer {
+    padding: 0 0 10px;
+    background-color: #fff;
+    @include mq {
+        padding: 20px 0 10px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 50px;
+        align-items: baseline;
+        @include mq {
+            margin: 0 0 30px;
+        }
+        &__nav {
+            margin-left: auto;
+            &__list {
+                text-align: right;
+                font: 500 15px/1em "noto sans japanese", sans-serif;
+                & > li + li {
+                    margin-top: 20px;
+                }
+                & a {
+                    letter-spacing: 2px;
+                    display: inline-block;
+                    padding: 0 5px 5px;
+                    font: 500 18px/1em "noto sans japanese", sans-serif;
+                    position: relative;
+                    &::before {
+                        background: $color-text;
+                        content: "";
+                        width: 90%;
+                        height: 2px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto;
+                        transform-origin: right top;
+                        transform: scale(0, 1);
+                        transition: transform 0.3s;
+                    }
+                    &:hover::before {
+                        transform-origin: left top;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &__logo {
+            font-size: 3rem;
+            line-height: 60px;
+            color: $color-text;
+            font-weight: bold;
+            @include mq {
+                font-size: 2.3rem;
+                display: block;
+            }
+        }
+    }
+    &__copy {
+        color: $color-text;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}

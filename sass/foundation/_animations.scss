@@ -1,0 +1,424 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+// ヘッダーフェードイン
+
+.header__fade {
+    opacity: 0;
+    animation: appear_header 2.5s forwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes appear_header {
+    100% {
+        opacity: 1;
+    }
+}
+
+//　スライダーズーム
+
+@keyframes zoomUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.add-animation {
+    animation: zoomUp 10s linear 0s normal both;
+}
+
+//　メインヴィジュアルフェード
+
+@keyframes top_main_fade {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+//　回るロゴ
+
+.circle_block {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    @include mq {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+    }
+}
+.circleText {
+    overflow: visible;
+    animation: rotation 18s linear infinite;
+}
+.circleText__circle {
+    fill: none;
+}
+.circleText__text {
+    fill: #676767d4;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    z-index: 40;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//　動く波
+
+.waves {
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+.waves_bg-w {
+    background-color: #fff;
+}
+.waves_bg-g {
+    background-color: $color-sub;
+}
+.waves_item {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+    @include mq {
+        height: 50px;
+        min-height: 50px;
+    }
+}
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* フェードイン */
+
+.fadein {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+.fadein2 {
+    opacity: 0;
+    transition: all 1s;
+}
+.fadein_l {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s;
+}
+.fadein_r {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s;
+}
+
+// Topへボタン
+
+.top {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.top img {
+    transition: transform 1s;
+    @include mq {
+        display: none;
+    }
+}
+
+.top:hover img {
+    transform: rotate(360deg);
+}
+
+// ポップアップ
+
+.popup {
+    display: none;
+}
+// ポップアップwindow部分
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    height: 100%;
+}
+// オーバーレイの背景部分
+#bg_gray {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 80;
+}
+// ウィンドウ部分
+#window {
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.6);
+    z-index: 90;
+    opacity: 0;
+    line-height: 2;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    @include mq {
+        width: 80%;
+    }
+}
+#window h3 {
+    font-size: clamp(0.938rem, 0.733rem + 1.02vw, 1.5rem);
+    text-align: left;
+}
+// 閉じるボタン
+#btn_cloth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-main;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+    @include mq {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+}
+#btn_cloth:hover {
+    opacity: 0.7;
+}
+#btn_cloth span,
+#btn_cloth span::before {
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #fff;
+}
+#btn_cloth span {
+    transform: rotate(45deg);
+}
+#btn_cloth span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+// クリックで表示
+#popup:checked ~ #overlay,
+#popup2:checked ~ #overlay {
+    visibility: visible;
+}
+#popup:checked ~ #overlay #window,
+#popup2:checked ~ #overlay #window {
+    animation: popup 500ms forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes popup {
+    100% {
+        opacity: 1;
+    }
+}
+#txt_label {
+    cursor: pointer;
+}
+#txt_label:hover {
+    opacity: 0.7;
+}
+
+// ポップアップボタン
+
+@keyframes dokidoki {
+    0%,
+    40%,
+    60%,
+    80% {
+        transform: scale(1);
+    }
+    50%,
+    70% {
+        transform: scale(0.95);
+    }
+}
+
+// アコーディオン
+
+.faq_wrap {
+    width: 90%;
+    border: 2px solid $color-main;
+    border-radius: 10px;
+    margin: 0 auto 70px;
+    @include mq {
+        margin: 0 auto 50px;
+    }
+}
+.faq_wrap label {
+    padding: 10px;
+    background: $color-main;
+    display: flex;
+    gap: clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem);
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    align-items: center;
+}
+.faq_wrap label p {
+    font-size: clamp(1.5rem, 1.05rem + 1.92vw, 2.25rem);
+    color: #fff;
+}
+.faq_wrap label p:nth-child(2) {
+    font-size: clamp(1rem, 0.7rem + 1.28vw, 1.5rem);
+    color: #fff;
+}
+.faq_wrap label img {
+    width: clamp(1.563rem, 1.188rem + 1.6vw, 2.188rem);
+    height: clamp(1.563rem, 1.188rem + 1.6vw, 2.188rem);
+}
+// チェックボックスを非表示にする
+.faq_wrap input {
+    display: none;
+}
+// 三角矢印アイコン
+.arrow {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 24px;
+    margin-left: 6px;
+    flex-shrink: 0;
+    transform-origin: center 43%;
+    transition: transform 0.5s;
+}
+.arrow::before,
+.arrow::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 3px;
+    background-color: #fff;
+}
+.arrow::before {
+    left: 0;
+    transform: rotate(45deg);
+}
+.arrow::after {
+    right: 0;
+    transform: rotate(-45deg);
+}
+// コンテンツ初めは非表示
+.faq_content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.faq_content p {
+    font-size: clamp(0.875rem, 0.8rem + 0.32vw, 1rem);
+    line-height: 1.8;
+    background-color: #fff;
+    margin: 0;
+    padding: 1em;
+    border-radius: 0 0 8px 8px;
+}
+.faq_content a {
+    color: $color-main;
+}
+// クリックするとコンテンツ表示
+.faq_wrap input:checked ~ .faq_content {
+    max-height: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+// アコーディオン表示の際に三角回転
+.faq_wrap input:checked ~ label .arrow {
+    transform: rotate(180deg);
+}
+
+// .about__profile__body__img__picture
+
+@keyframes yurayura {
+    50% {
+        transform: rotate(-15deg);
+    }
+    0%,
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+// .about__profile__body__img__github
+
+@keyframes yurayura2 {
+    50% {
+        transform: rotate(15deg);
+    }
+    0%,
+    100% {
+        transform: rotate(-15deg);
+    }
+}
