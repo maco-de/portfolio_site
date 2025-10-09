@@ -1,8 +1,6 @@
 @use "../foundation/variables" as *;
 @use "../foundation/mixin" as *;
 
-// お仕事への考え方
-
 .about {
     background-color: $color-sub;
     &__ttl {
