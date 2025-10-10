@@ -294,12 +294,12 @@
                 <?php if ($the_query->have_posts()) : ?>
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                        <div class="home__works__body__item fadein">
+                        <article class="home__works__body__item fadein">
                             <a href="<?php the_permalink(); ?>">
                                 <img class="home__works__body__item__img" src="<?php the_field('works_img'); ?>">
                                 <p><?php the_field('works_ttl'); ?></p>
                             </a>
-                        </div>
+                        </article>
 
                     <?php endwhile; ?>
                 <?php else : ?>
