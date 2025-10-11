@@ -58,6 +58,7 @@
                         <p>まだ投稿はありません。</p>
                     <?php endif;
                     wp_reset_postdata(); ?>
+
                 </div>
             </div>
         </div>
@@ -96,7 +97,5 @@
         </svg>
     </div>
 </main>
-
-
 
 <?php get_footer(); ?>

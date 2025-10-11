@@ -1,6 +1,12 @@
 @use "../foundation/variables" as *;
 @use "../foundation/mixin" as *;
 
+/*
+single.php,
+archive.php,
+date.php 共通
+*/
+
 .news {
     background-color: $color-sub;
     &__ttl {
@@ -76,6 +82,11 @@
                     color: rgb(134, 157, 171, 0.8);
                     border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
                 }
+            }
+            & h1 {
+                text-align: center;
+                font-size: clamp(1.25rem, 1.1rem + 0.64vw, 1.5rem);
+                margin-bottom: 30px;
             }
         }
     }
