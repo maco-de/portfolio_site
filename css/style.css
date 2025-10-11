@@ -1509,6 +1509,33 @@ div.wpcf7 .wpcf7-spinner {
     padding: 30px 30px 100px;
   }
 }
+.home__news__body__post__article {
+  text-align: left;
+  border-bottom: #bebebe solid 1px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.home__news__body__post__article:first-child {
+  padding-top: 0;
+}
+.home__news__body__post__article:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.home__news__body__post__article time {
+  display: block;
+}
+.home__news__body__post__article p {
+  margin-top: 10px;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: solid 1px transparent;
+}
+.home__news__body__post__article:hover p {
+  color: rgba(134, 157, 171, 0.8);
+  border-bottom: rgba(134, 157, 171, 0.8) solid 1px;
+}
 
 .home__service {
   background-color: #f0f0f0;

@@ -127,12 +127,12 @@
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
 
-                            <div class="news_box">
+                            <article class="home__news__body__post__article">
                                 <a href="<?php the_permalink(); ?>">
                                     <time><?php the_time('Y.m.d'); ?></time>
                                     <p><?php the_field('news_ttl'); ?></p>
                                 </a>
-                            </div>
+                            </article>
 
                         <?php endwhile; ?>
                     <?php else : ?>
