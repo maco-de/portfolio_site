@@ -510,18 +510,3 @@
         }
     }
 }
-
-// 404ページ
-
-.page_404 {
-    text-align: center;
-    font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
-    margin-top: 250px;
-    @include mq {
-        margin-top: 150px;
-    }
-    & h1 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-}
