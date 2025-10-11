@@ -2,7 +2,7 @@
 
 <main>
     <div class="about">
-        <div class="about__ttl">
+        <div class="about__title">
             <h1>ABOUT</h1>
             <span>maco-deについて</span>
         </div>
@@ -40,8 +40,8 @@
             </svg>
         </div>
         <section class="about__concept">
-            <div class="container">
-                <h2 class="about__concept__ttl">お仕事への考え方</h2>
+            <div class="content-width">
+                <h2 class="about__concept__title">お仕事への考え方</h2>
                 <div class="about__concept__body">
                     <div class="about__concept__body__text">
                         <h3>1.コミュニケーション</h3>
@@ -67,8 +67,8 @@
             </div>
         </section>
         <section class="about__profile">
-            <div class="container">
-                <h2 class="about__profile__ttl">プロフィール</h2>
+            <div class="content-width">
+                <h2 class="about__profile__title">プロフィール</h2>
                 <div class="about__profile__body">
                     <div class="about__profile__body__img fadein">
                         <img class="about__profile__body__img__picture" src="<?php echo get_template_directory_uri(); ?>/img/profile.png">

@@ -2,10 +2,10 @@
 @use "../foundation/mixin" as *;
 
 .sidebar {
-    background-color: #fff;
+    background-color: $color-white;
     padding: 20px;
     border-radius: 20px;
-    &__ttl {
+    &__title {
         font-weight: bold;
         font-size: 20px;
         margin-bottom: 30px;

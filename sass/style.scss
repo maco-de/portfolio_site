@@ -6,12 +6,14 @@
 @use "foundation/mixin";
 @use "foundation/animations";
 
-@use "layout/l-header";
-@use "layout/l-sidebar";
-@use "layout/l-footer";
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/footer";
 
-@use "component/c-button";
+@use "component/button";
 @use "component/form";
+@use "component/popup";
+@use "component/faq";
 
 @use "pages/front-page";
 @use "pages/about";

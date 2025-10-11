@@ -2,7 +2,7 @@
 
 <main>
     <div class="news">
-        <div class="news__ttl">
+        <div class="news__title">
             <h1>NEWS</h1>
             <span>お知らせ</span>
         </div>
@@ -39,7 +39,7 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <div class="news__content">
                 <div class="news__content__sidebar"><?php get_sidebar(); ?></div>
                 <div class="news__content__post">

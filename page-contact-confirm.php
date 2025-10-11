@@ -11,7 +11,7 @@
 
 <main>
     <div class="contact" id="contact">
-        <div class="contact__ttl">
+        <div class="contact__title">
             <h1>CONTACT</h1>
             <span>お問い合せ</span>
         </div>
@@ -48,7 +48,7 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <div class="contact__content">
                 <p class=contact__content__text>以下の内容で送信してよろしいですか？</p>
                 <!-- フォーム -->

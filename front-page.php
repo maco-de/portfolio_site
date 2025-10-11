@@ -4,10 +4,10 @@
     <div class="home__start">
         <h1>maco-de</h1>
     </div>
-    <section class="home__mv">
-        <p class="home__mv__title">フリーランスフロントエンドエンジニア</p>
-        <div class="home__mv__body">
-            <div class="home__mv__body__text">
+    <section class="home__main-visual">
+        <p class="home__main-visual__title">フリーランスフロントエンドエンジニア</p>
+        <div class="home__main-visual__content">
+            <div class="home__main-visual__content__text">
                 <p>コーディング代行、<br>ホームページ修正、<br>WordPressの構築など、<br>Web制作のお仕事を承っております。</p>
                 <div class="circle_block">
                     <svg class="circleText" viewBox="0 0 100 100">
@@ -20,7 +20,7 @@
                     </svg>
                 </div>
             </div>
-            <ul class="home__mv__body__img">
+            <ul class="home__main-visual__content__img">
                 <picture>
                     <source media="(max-width: 800px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top_sp.jpg">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/top.jpg" alt="画像01">
@@ -73,8 +73,8 @@
         </svg>
     </div>
     <section class="home__about">
-        <div class="container fadein">
-            <div class="home__about__ttl">
+        <div class="content-width fadein">
+            <div class="home__about__title">
                 <h2>ABOUT</h2>
                 <p>maco-deについて</p>
             </div>
@@ -87,10 +87,10 @@
                     <br>
                     お見積もり、ご相談は無料ですので、御用の際はぜひお問い合わせください。
                 </p>
-                <label class="c-popup__button" for="popup" id="txt_label">maco-de(マコード)とは？</label>
+                <label class="popup__button" for="popup" id="txt_label">maco-de(マコード)とは？</label>
             </div>
             <div class="fadein2">
-                <a class="c-button01" href="<?php echo home_url(); ?>/about/">詳細はこちら</a>
+                <a class="button01" href="<?php echo home_url(); ?>/about/">詳細はこちら</a>
             </div>
         </div>
     </section>
@@ -115,19 +115,19 @@
     <!-- ニュース -->
 
     <section class="home__news">
-        <div class="container">
-            <div class="home__news__body fadein">
-                <div class="home__news__body__ttl">
+        <div class="content-width">
+            <div class="home__news__content fadein">
+                <div class="home__news__content__title">
                     <h2>NEWS</h2>
                     <p>お知らせ</p>
-                    <a class="home__news__body__ttl__button c-button01" href="<?php echo home_url(); ?>/news/">お知らせ一覧へ</a>
+                    <a class="home__news__content__title__button button01" href="<?php echo home_url(); ?>/news/">お知らせ一覧へ</a>
                 </div>
-                <div class="home__news__body__post">
+                <div class="home__news__content__post">
 
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
 
-                            <article class="home__news__body__post__article">
+                            <article class="home__news__content__post__article">
                                 <a href="<?php the_permalink(); ?>">
                                     <time><?php the_time('Y.m.d'); ?></time>
                                     <p><?php the_field('news_ttl'); ?></p>
@@ -147,27 +147,27 @@
     <!-- サービス -->
 
     <section class="home__service">
-        <div class="home__service__bg">
-            <div class="container">
-                <div class="home__service__ttl fadein_l">
+        <div class="home__service__clip-path">
+            <div class="content-width">
+                <div class="home__service__title fadein_l">
                     <h2>SERVICE</h2>
                     <p>サービス</p>
                 </div>
-                <div class="home__service__body">
-                    <div class="home__service__body__item1 fadein">
+                <div class="home__service__content">
+                    <div class="home__service__content__item1 fadein">
                         <h3>コーディング</h3>
                         <img src="<?php echo get_template_directory_uri(); ?>/img/coding.png" alt="">
                         <p>デザインを忠実に再現することはもちろんのこと、迅速にコーディングできるよう努めております。レスポンシブにも対応し、表示崩れしていないかを徹底検証いたします。
                             <br>納品後も他者が変更や修正をすることを考え、保守性の高いコーディングを意識しております。
                         </p>
                     </div>
-                    <div class="home__service__body__item2 fadein">
+                    <div class="home__service__content__item2 fadein">
                         <h3>WordPress構築</h3>
                         <img src="<?php echo get_template_directory_uri(); ?>/img/web_site.png" alt="">
                         <p>WebサイトのWordPress化を致します。既存のデザインテンプレートはもちろん、オリジナルデザインでの構築も可能です。<br>デフォルトのブログ機能に加え、カスタム投稿の追加や、カスタムフィールド、お問合せフォームなどもご相談ください。
                         </p>
                     </div>
-                    <div class="home__service__body__item3 fadein">
+                    <div class="home__service__content__item3 fadein">
                         <h3>サイト改修</h3>
                         <img src="<?php echo get_template_directory_uri(); ?>/img/reload.png" alt="">
                         <p>運用中のサイトにコンテンツを追加したり、レイアウトが崩れてしまっている所を直したい…などのお悩みがありましたらぜひご相談ください。
@@ -182,8 +182,8 @@
     <!-- ご依頼の流れ -->
 
     <section class="home__flow">
-        <div class="container">
-            <div class="home__flow__ttl fadein">
+        <div class="content-width">
+            <div class="home__flow__title fadein">
                 <h2>FLOW</h2>
                 <p>お仕事の流れ</p>
             </div>
@@ -242,9 +242,9 @@
                 </div>
             </div>
             <div class="fadein2">
-                <a class="c-popup__button fadein" href="<?php echo home_url(); ?>/contact">お問い合わせはこちら</a>
+                <a class="popup__button fadein" href="<?php echo home_url(); ?>/contact">お問い合わせはこちら</a>
             </div>
-            <div class="home__flow__ttl2 fadein">
+            <div class="home__flow__title2 fadein">
                 <h2>PRICE</h2>
                 <p>料金表</p>
             </div>
@@ -278,12 +278,12 @@
     <!-- 制作実績 -->
 
     <section class="home__works">
-        <div class="container">
-            <div class="home__works__ttl fadein_r">
+        <div class="content-width">
+            <div class="home__works__title fadein_r">
                 <h2>WORKS</h2>
                 <p>制作実績</p>
             </div>
-            <div class="home__works__body">
+            <div class="home__works__content">
                 <?php
                 $args = array(
                     'post_type' => 'works',
@@ -294,9 +294,9 @@
                 <?php if ($the_query->have_posts()) : ?>
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                        <article class="home__works__body__item fadein">
+                        <article class="home__works__content__article fadein">
                             <a href="<?php the_permalink(); ?>">
-                                <img class="home__works__body__item__img" src="<?php the_field('works_img'); ?>">
+                                <img class="home__works__content__article__img" src="<?php the_field('works_img'); ?>">
                                 <p><?php the_field('works_ttl'); ?></p>
                             </a>
                         </article>
@@ -308,7 +308,7 @@
                 wp_reset_postdata(); ?>
             </div>
             <div class="fadein2">
-                <a class="c-button01" href="<?php echo home_url(); ?>/works/">制作実績一覧へ</a>
+                <a class="button01" href="<?php echo home_url(); ?>/works/">制作実績一覧へ</a>
             </div>
         </div>
     </section>

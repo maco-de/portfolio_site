@@ -3,13 +3,13 @@
 
 .single-works {
     background-color: $color-sub;
-    &__ttl {
+    &__title {
         height: 300px;
-        background-color: #fff;
+        background-color: $color-white;
         text-align: center;
         padding: 180px 0 0;
         letter-spacing: 0.1em;
-        @include mq {
+        @include media-query {
             height: 200px;
             padding: 90px 0 0;
         }
@@ -29,29 +29,29 @@
     }
     &__article {
         text-align: center;
-        margin: 10px auto;
+        margin: 30px auto;
         padding: 10px;
         width: 95%;
-        @include mq {
+        @include media-query {
             padding: 30px 0 0;
         }
         & img {
             width: 100%;
             margin-bottom: 50px;
         }
-        &__ttl {
-            background-color: #fff;
+        &__title {
+            background-color: $color-white;
             padding: 5px;
             font-size: clamp(1.25rem, 0.8rem + 1.92vw, 2rem);
             margin-bottom: 50px;
             border-radius: 5px;
             letter-spacing: 10px;
-            @include mq {
+            @include media-query {
                 padding: 10px;
                 letter-spacing: 5px;
             }
         }
-        &__sub-ttl {
+        &__sub-title {
             font-size: 20px;
             padding: 0 0 5px 10px;
             display: block;
@@ -61,18 +61,18 @@
         & a {
             display: block;
             text-align: left;
-            background-color: #fff;
+            background-color: $color-white;
             border-radius: 5px;
             margin: 50px auto;
             padding: 20px;
         }
         &__text {
             text-align: left;
-            background-color: #fff;
+            background-color: $color-white;
             border-radius: 5px;
             margin: 50px auto;
             padding: 20px;
-            @include mq {
+            @include media-query {
                 margin: 50px auto;
                 padding: 10px;
             }

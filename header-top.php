@@ -23,7 +23,7 @@
 <body>
     <?php wp_body_open(); ?>
     <header class="header header__fade">
-        <div class="container">
+        <div class="content-width">
             <div class="header__menu">
                 <div class="header__menu__logo">
                     <a class="header__menu__logo__link" href="<?php echo home_url(); ?>">maco-de</a>

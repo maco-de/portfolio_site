@@ -3,13 +3,13 @@
 
 .about {
     background-color: $color-sub;
-    &__ttl {
+    &__title {
         height: 300px;
-        background-color: #fff;
+        background-color: $color-white;
         text-align: center;
         padding: 180px 0 0;
         letter-spacing: 0.1em;
-        @include mq {
+        @include media-query {
             height: 200px;
             padding: 90px 0 0;
         }
@@ -30,16 +30,16 @@
     &__concept {
         text-align: center;
         padding: 50px 0;
-        @include mq {
+        @include media-query {
             padding: 50px 0 20px;
         }
-        &__ttl {
+        &__title {
             font-size: clamp(1.75rem, 1.375rem + 1.6vw, 2.375rem);
             border-bottom: none;
             padding-bottom: 30px;
         }
         &__body {
-            background-color: #fff;
+            background-color: $color-white;
             border-radius: 50px;
             padding: 20px;
             &__text {
@@ -59,18 +59,18 @@
     &__profile {
         padding: 50px 0;
         text-align: center;
-        &__ttl {
+        &__title {
             font-size: clamp(1.75rem, 1.375rem + 1.6vw, 2.375rem);
             border-bottom: none;
             padding-bottom: 30px;
-            @include mq {
+            @include media-query {
                 padding-bottom: 0;
             }
         }
         &__body {
             display: flex;
             text-align: left;
-            @include mq {
+            @include media-query {
                 flex-direction: column;
                 align-items: center;
             }
@@ -78,7 +78,7 @@
                 width: 30%;
                 text-align: center;
                 position: relative;
-                @include mq {
+                @include media-query {
                     width: 100%;
                 }
                 &__picture {
@@ -92,7 +92,7 @@
                     position: absolute;
                     bottom: 160px;
                     right: 50px;
-                    @include mq {
+                    @include media-query {
                         bottom: 10px;
                         right: 30px;
                     }
@@ -101,17 +101,17 @@
             &__table {
                 width: 70%;
                 line-height: 30px;
-                background-color: #fff;
+                background-color: $color-white;
                 border-radius: 50px;
                 padding: 20px;
-                @include mq {
+                @include media-query {
                     width: 100%;
                 }
                 & dl {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
-                    @include mq {
+                    @include media-query {
                         flex-direction: column;
                     }
                 }
@@ -120,7 +120,7 @@
                     padding: 10px;
                     margin-right: 2px;
                     border-bottom: dashed 1px $color-main;
-                    @include mq {
+                    @include media-query {
                         padding: 20px 20px 10px;
                         width: 100%;
                         margin-right: 0;
@@ -138,7 +138,7 @@
                     padding: 10px 15px;
                     border-bottom: dashed 1px $color-main;
                     letter-spacing: 0.1em;
-                    @include mq {
+                    @include media-query {
                         width: 100%;
                         padding: 5px 15px;
                     }
@@ -151,7 +151,7 @@
         &__text {
             line-height: 1.8;
             text-align: left;
-            background-color: #fff;
+            background-color: $color-white;
             border-radius: 50px;
             margin-top: 50px;
             padding: 20px;

@@ -2,7 +2,7 @@
 
 <main>
     <div class="page-404">
-        <h1 class="page-404__ttl">404 NOT FOUND</h1>
+        <h1 class="page-404__title">404 NOT FOUND</h1>
         <div class="waves waves_bg-w">
             <svg
                 class="waves_item"

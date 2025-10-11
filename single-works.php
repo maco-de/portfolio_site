@@ -2,7 +2,7 @@
 
 <main>
     <div class="single-works">
-        <div class="single-works__ttl">
+        <div class="single-works__title">
             <h2>WORKS</h2>
             <span>制作実績</span>
         </div>
@@ -39,13 +39,13 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <article class="single-works__article">
-                <h1 class="single-works__article__ttl"><?php the_field('works_ttl'); ?></h1>
+                <h1 class="single-works__article__title"><?php the_field('works_ttl'); ?></h1>
                 <img src="<?php the_field('works_img'); ?>">
-                <p class="single-works__article__sub-ttl">URL</p>
+                <p class="single-works__article__sub-title">URL</p>
                 <a href="<?php the_field('works_link'); ?>"><?php the_field('works_link'); ?></a>
-                <p class="single-works__article__sub-ttl">制作サイトについて</p>
+                <p class="single-works__article__sub-title">制作サイトについて</p>
                 <p class="single-works__article__text"><?php the_field('works_text'); ?></p>
             </article>
         </div>

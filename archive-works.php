@@ -2,7 +2,7 @@
 
 <main>
     <div class="works">
-        <div class="works__ttl">
+        <div class="works__title">
             <h1>WORKS</h1>
             <span>制作実績</span>
         </div>
@@ -39,7 +39,7 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <div class="works__content">
 
                 <?php if (have_posts()) : ?>
@@ -48,7 +48,7 @@
                         <article class="works__content__article">
                             <a class="works__content__article__link" href="<?php the_permalink(); ?>">
                                 <img class="works__content__article__link__img" src="<?php the_field('works_img'); ?>" alt="<?php the_field('works_ttl'); ?>">
-                                <p class="works__content__article__link__ttl"><?php the_field('works_ttl'); ?>
+                                <p class="works__content__article__link__title"><?php the_field('works_ttl'); ?>
                                     <time class="card_time"><?php the_time('Y.m.d'); ?></time>
                                 </p>
                             </a>

@@ -1,13 +1,13 @@
 @use "../foundation/variables" as *;
 @use "../foundation/mixin" as *;
 
-.c-button01 {
+.button01 {
     text-align: center;
     display: block;
     width: 150px;
     margin: 40px auto 10px;
-    border: #dddddd solid 1px;
-    background-color: #fff;
+    border: $color-sub solid 1px;
+    background-color: $color-white;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
     padding: 8px 5px;
     border-radius: 10px;
@@ -15,20 +15,27 @@
     &:hover {
         transform: translate(5px, 5px);
         box-shadow: none;
-        color: #fff;
+        color: $color-white;
         background-color: $color-text;
         border: $color-text solid 1px;
+        @include media-query {
+            transform: none;
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+            color: $color-text;
+            background-color: $color-white;
+            border: $color-sub solid 1px;
+        }
     }
 }
 
-.c-popup__button {
+.popup__button {
     width: 90%;
     max-width: 250px;
     font-size: 16px;
     letter-spacing: 0.1em;
-    color: #fff;
+    color: $color-white;
     font-weight: 400;
-    outline: 1px solid #676767d4;
+    outline: 1px solid $color-text;
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -50,6 +57,10 @@
         top: 0;
         left: 0;
         transition: all 0.3s;
+        @include media-query {
+            top: auto;
+            left: auto;
+        }
     }
     &::before {
         content: "";

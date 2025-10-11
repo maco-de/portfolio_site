@@ -2,7 +2,7 @@
 
 <main>
     <div class="contact" id="contact">
-        <div class="contact__ttl">
+        <div class="contact__title">
             <h1>CONTACT</h1>
             <span>お問い合せ</span>
         </div>
@@ -39,7 +39,7 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <div class="contact__content">
                 <p class="contact__content__text">制作の依頼・ご相談などはこちらです。<br>
                     ご連絡先のお間違えにご注意のうえ、お気軽にお問い合わせくださいませ。

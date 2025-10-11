@@ -11,7 +11,7 @@
 
 <main>
     <div class="contact" id="contact">
-        <div class="contact__ttl">
+        <div class="contact__title">
             <h1>CONTACT</h1>
             <span>お問い合せ</span>
         </div>
@@ -48,7 +48,7 @@
                 </g>
             </svg>
         </div>
-        <div class="container">
+        <div class="content-width">
             <div class="contact__content">
                 <p class=contact__content__text-complete>お問い合わせありがとうございました。<br>担当者よりご連絡させていただきますので、今しばらくお待ちくださいませ。</p>
                 <a class="confirm" href="<?php echo home_url(); ?>">HOMEへ</a>
