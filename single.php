@@ -43,7 +43,7 @@
             <div class="news__content">
                 <div class="news__content__sidebar"><?php get_sidebar(); ?></div>
                 <article class="news__content__post">
-                    <h1><?php the_field('news_ttl'); ?></h1>
+                    <h1><?php the_field('news_title'); ?></h1>
                     <p><?php the_field('news_text'); ?></p>
                 </article>
             </div>

@@ -41,7 +41,7 @@
         </div>
         <div class="content-width">
             <article class="single-works__article">
-                <h1 class="single-works__article__title"><?php the_field('works_ttl'); ?></h1>
+                <h1 class="single-works__article__title"><?php the_field('works_title'); ?></h1>
                 <img src="<?php the_field('works_img'); ?>">
                 <p class="single-works__article__sub-title">URL</p>
                 <a href="<?php the_field('works_link'); ?>"><?php the_field('works_link'); ?></a>

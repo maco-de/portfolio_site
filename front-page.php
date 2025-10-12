@@ -130,7 +130,7 @@
                             <article class="home__news__content__post__article">
                                 <a href="<?php the_permalink(); ?>">
                                     <time><?php the_time('Y.m.d'); ?></time>
-                                    <p><?php the_field('news_ttl'); ?></p>
+                                    <p><?php the_field('news_title'); ?></p>
                                 </a>
                             </article>
 
@@ -297,7 +297,7 @@
                         <article class="home__works__content__article fadein">
                             <a href="<?php the_permalink(); ?>">
                                 <img class="home__works__content__article__img" src="<?php the_field('works_img'); ?>">
-                                <p><?php the_field('works_ttl'); ?></p>
+                                <p><?php the_field('works_title'); ?></p>
                             </a>
                         </article>
 
