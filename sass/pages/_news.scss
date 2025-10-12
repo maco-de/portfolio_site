@@ -1,70 +1,92 @@
 @use "../foundation/variables" as *;
 @use "../foundation/mixin" as *;
 
-.news_flex {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    @include mq {
-        flex-direction: column-reverse;
-    }
-}
+/*
+single.php,
+archive.php,
+date.php 共通
+*/
 
-.news_archive_box {
-    padding: 80px 50px 50px;
-    width: 80%;
-    @include mq {
-        padding: 50px 0 0 0;
+.news {
+    background-color: $color-sub;
+    &__title {
+        height: 300px;
+        background-color: $color-white;
+        text-align: center;
+        padding: 180px 0 0;
+        @include media-query {
+            height: 200px;
+            padding: 90px 0 0;
+        }
+        & h1 {
+            font-size: clamp(3rem, -1rem + 8vw, 4rem);
+            letter-spacing: 8px;
+            color: $color-text;
+            border-bottom: 3px solid;
+            display: inline-block;
+        }
+        & span {
+            font-size: clamp(1rem, 0.85rem + 0.64vw, 1.25rem);
+            font-weight: bold;
+            letter-spacing: 4px;
+            display: block;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
+        padding: 50px 0;
+        @include media-query {
+            flex-direction: column-reverse;
+        }
+        &__sidebar {
+            width: 17%;
+            @include media-query {
+                width: 50%;
+                padding: 50px 0 0;
+            }
+        }
+        &__post {
+            background-color: $color-white;
+            border-radius: 20px;
+            padding: 50px;
+            width: 80%;
+            @include media-query {
+                padding: 20px;
+                width: 100%;
+            }
+            &__article {
+                text-align: left;
+                border-bottom: $color-sub solid 1px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+                & time {
+                    display: block;
+                }
+                & p {
+                    margin-top: 10px;
+                    display: inline-block;
+                    transition: 0.3s;
+                    border-bottom: solid 1px transparent;
+                }
+                &:hover p {
+                    color: rgb(134, 157, 171, 0.8);
+                    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                }
+            }
+            & h1 {
+                text-align: center;
+                font-size: clamp(1.25rem, 1.1rem + 0.64vw, 1.5rem);
+                margin-bottom: 30px;
+            }
+        }
     }
-}
-
-.news_archive_ttl {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.news_archive_list li {
-    font-size: 16px;
-    margin: 0 0 15px 10px;
-}
-
-.news_sidebar {
-    padding: 80px 20px 0;
-    @include mq {
-        padding: 50px 0 0;
-    }
-}
-
-.news_box {
-    text-align: left;
-    border-bottom: #bebebe solid 1px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-.news_box:first-child {
-    padding-top: 0;
-}
-
-.news_box:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.news_box time {
-    display: block;
-}
-
-.news_box p {
-    margin-top: 10px;
-    display: inline-block;
-    transition: 0.3s;
-    border-bottom: solid 1px transparent;
-}
-
-.news_box:hover p {
-    color: rgb(134, 157, 171, 0.8);
-    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
 }

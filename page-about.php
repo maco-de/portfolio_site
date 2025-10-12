@@ -2,7 +2,7 @@
 
 <main>
     <div class="about">
-        <div class="about__ttl">
+        <div class="about__title">
             <h1>ABOUT</h1>
             <span>maco-deについて</span>
         </div>
@@ -39,9 +39,39 @@
                 </g>
             </svg>
         </div>
+        <section class="about__rule">
+            <div class="content-width">
+                <h2 class="about__rule__title">コーディングルール</h2>
+                <p class="about__rule__text">
+                    Web制作において最も重要なのは『保守性の高さ』だと思っています。<br>
+                    第三者が初めて見てもすぐにわかるよう、クラス名やフォルダの管理を徹底しております。<br>
+                    ここではそんな私のコーディングルールをお伝えしようと思います。<br>
+                    <br>
+                    HTMLでは、適切なHTMLタグを使いセマンティックなマークアップを心掛けています。<br>
+                    適切なタグの使用はSEO対策になることはもちろんのこと、自分自身の作業のしやすさ、そして高い保守性に繋がります。<br>
+                    <br>
+                    CSSでは、SCSSを使い可読性を最優先させています。<br>
+                    FLOCSSとBEMのわかりやすい部分を採用し、オリジナル要素を加えて管理しています。<br>
+                    BEM本来の　Block__Element--Modifier　での命名では、他者に自分の意図を伝えるのが難しく感じたからです。<br>
+                    (自分自身、他者のBEMでの命名を見ると少し考えてしまうことがあります)<br>
+                    <br>
+                    その為、このABOUTページのこの文章であれば、『ABOUTページ』の『ルール(セクション名)』の『文章』とし、
+                    『　.about__rule__text　』と命名しています。
+                    アンダースコアで繋げた理由は、ダブルクリックでクラス名を全選択できる為です。<br>
+                    <br>
+                    FLOCSSでのファイル構成も、第三者が見た時のわかりにくさを排除する為、なるべくページ単位で完結できるよう構成しています。<br>
+                    共通のパーツがあってもmixinを多用しすぎると、他のフォルダやファイルを行き来しなければなりません。
+                    なるべくページ単位で管理することで、1つのSCSSファイルを見れば済むようにしています。
+                    (アニメーションやボタンなどのパーツは別ファイルですが、その際はどのページのどのクラスのアニメーションかコメントをつけています)<br>
+                    <br>
+                    このようにオリジナルのルールを設け、保守性の高さを確立しています。<br>
+                    これにより他者へのわかりやすさはもちろんのこと、自分自身の作業の効率化・迷いの排除、そして決まった納期までの納品を遵守いたします。
+                </p>
+            </div>
+        </section>
         <section class="about__concept">
-            <div class="container">
-                <h2 class="about__concept__ttl">お仕事への考え方</h2>
+            <div class="content-width">
+                <h2 class="about__concept__title">お仕事への考え方</h2>
                 <div class="about__concept__body">
                     <div class="about__concept__body__text">
                         <h3>1.コミュニケーション</h3>
@@ -67,13 +97,13 @@
             </div>
         </section>
         <section class="about__profile">
-            <div class="container">
-                <h2 class="about__profile__ttl">プロフィール</h2>
+            <div class="content-width">
+                <h2 class="about__profile__title">プロフィール</h2>
                 <div class="about__profile__body">
                     <div class="about__profile__body__img fadein">
-                        <img class="about__profile__body__img__picture" src="<?php echo get_template_directory_uri(); ?>/img/profile.png">
+                        <img class="about__profile__body__img__picture" src="<?php echo get_template_directory_uri(); ?>/img/profile.png" alt="プロフィール">
                         <a href="https://github.com/maco-de">
-                            <img class="about__profile__body__img__github" src="<?php echo get_template_directory_uri(); ?>/img/github.png" alt="">
+                            <img class="about__profile__body__img__github" src="<?php echo get_template_directory_uri(); ?>/img/github.png" alt="github">
                         </a>
                     </div>
                     <div class="about__profile__body__table fadein">

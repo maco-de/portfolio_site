@@ -1,27 +1,88 @@
 <?php get_header(); ?>
+
 <main>
-
-    <!-- お問い合わせ -->
-
-    <section class="contact" id="contact">
-        <div class="archive_works_ttl">
-            <h2>CONTACT</h2>
-            <h1>お問い合せ</h1>
+    <div class="contact" id="contact">
+        <div class="contact__title">
+            <h1>CONTACT</h1>
+            <span>お問い合せ</span>
         </div>
-        <div class="container">
-            <p class="contact_text">制作の依頼・ご相談などはこちらです。<br>
-                ご連絡先のお間違えにご注意のうえ、お気軽にお問い合わせくださいませ。
-            </p>
-
-            <!-- フォーム -->
-
-
-            <?php echo do_shortcode('[contact-form-7 id="ea5bf5b" title="コンタクトフォーム"]'); ?>
-
-
-
-
+        <div class="waves waves_bg-w">
+            <svg
+                class="waves_item"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28"
+                preserveAspectRatio="none"
+                shape-rendering="auto">
+                <defs>
+                    <path
+                        id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="0"
+                        fill="rgba(240,240,240,0.7)" />
+                    <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="3"
+                        fill="rgba(240,240,240,0.5)" />
+                    <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="5"
+                        fill="rgba(240,240,240,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(240,240,240)" />
+                </g>
+            </svg>
         </div>
-    </section>
+        <div class="content-width">
+            <div class="contact__content">
+                <p class="contact__content__text">制作の依頼・ご相談などはこちらです。<br>
+                    ご連絡先のお間違えにご注意のうえ、お気軽にお問い合わせくださいませ。
+                </p>
+
+                <!-- フォーム -->
+                <?php echo do_shortcode('[contact-form-7 id="ea5bf5b" title="コンタクトフォーム"]'); ?>
+            </div>
+        </div>
+    </div>
+    <div class="waves waves_bg-g">
+        <svg
+            class="waves_item"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto">
+            <defs>
+                <path
+                    id="gentle-wave"
+                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="0"
+                    fill="rgba(255,255,255,0.7)" />
+                <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="3"
+                    fill="rgba(255,255,255,0.5)" />
+                <use
+                    xlink:href="#gentle-wave"
+                    x="48"
+                    y="5"
+                    fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255)" />
+            </g>
+        </svg>
+    </div>
 </main>
+
 <?php get_footer(); ?>

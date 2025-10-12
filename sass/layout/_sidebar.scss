@@ -1,0 +1,17 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.sidebar {
+    background-color: $color-white;
+    padding: 20px;
+    border-radius: 20px;
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    &__list li {
+        font-size: 16px;
+        margin: 0 0 15px 0;
+    }
+}

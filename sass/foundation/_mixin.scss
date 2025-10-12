@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-@mixin mq {
+@mixin media-query {
     @media (max-width: ($bp)) {
         @content;
     }

@@ -5,8 +5,8 @@
 
 .footer {
     padding: 0 0 10px;
-    background-color: #fff;
-    @include mq {
+    background-color: $color-white;
+    @include media-query {
         padding: 20px 0 10px;
     }
     &__menu {
@@ -14,7 +14,7 @@
         justify-content: space-between;
         margin: 20px 0 50px;
         align-items: baseline;
-        @include mq {
+        @include media-query {
             margin: 0 0 30px;
         }
         &__nav {
@@ -56,7 +56,7 @@
             line-height: 60px;
             color: $color-text;
             font-weight: bold;
-            @include mq {
+            @include media-query {
                 font-size: 2.3rem;
                 display: block;
             }
@@ -64,7 +64,6 @@
     }
     &__copy {
         color: $color-text;
-        letter-spacing: 2px;
         text-align: center;
     }
 }

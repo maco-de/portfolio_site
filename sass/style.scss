@@ -6,13 +6,19 @@
 @use "foundation/mixin";
 @use "foundation/animations";
 
-@use "layout/l-header";
-@use "layout/l-footer";
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/footer";
 
-@use "component/c-button";
+@use "component/button";
+@use "component/form";
+@use "component/popup";
+@use "component/faq";
 
 @use "pages/front-page";
 @use "pages/about";
 @use "pages/news";
 @use "pages/works";
 @use "pages/contact";
+@use "pages/page-404";
+@use "pages/single-works";

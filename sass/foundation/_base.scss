@@ -2,44 +2,25 @@
 @use "mixin" as *;
 
 html {
-    color: $color-text;
     scroll-behavior: smooth;
+}
+
+body {
+    color: $color-text;
     word-break: break-all;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
         "Hiragino Sans", Meiryo, sans-serif;
     font-size: 16px;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
     color: $color-text;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2%;
-    overflow: hidden;
-    @include mq {
-        width: 100%;
-        max-width: 600px;
-        padding: 0 20px;
-        margin: 0 auto;
-    }
-}
-
-h1 {
-    font-size: 0.8rem;
+p {
+    letter-spacing: 0.1em;
+    line-height: 1.8;
 }
 
 h2 {
@@ -52,9 +33,43 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 1.5rem;
-    @include mq {
-        text-align: center;
-        font-size: 1.3rem;
+    font-size: 24px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: $color-sub;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: $color-text;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: $color-text;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+// コンテンツ幅
+.content-width {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2%;
+    overflow: hidden;
+    @include media-query {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 0 auto;
     }
 }
