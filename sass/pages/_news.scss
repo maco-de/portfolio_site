@@ -14,7 +14,6 @@ date.php 共通
         background-color: $color-white;
         text-align: center;
         padding: 180px 0 0;
-        letter-spacing: 0.1em;
         @include media-query {
             height: 200px;
             padding: 90px 0 0;

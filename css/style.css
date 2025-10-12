@@ -8,9 +8,12 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #757575;
-  scroll-behavior: smooth;
   word-break: break-all;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 16px;
@@ -19,6 +22,11 @@ body {
 
 a {
   color: #757575;
+}
+
+p {
+  letter-spacing: 0.1em;
+  line-height: 1.8;
 }
 
 h2 {
@@ -704,7 +712,6 @@ textarea:focus {
 }
 .footer__copy {
   color: #757575;
-  letter-spacing: 2px;
   text-align: center;
 }
 
@@ -1230,7 +1237,6 @@ div.wpcf7 .wpcf7-spinner {
 
 .faq_content p {
   font-size: clamp(0.875rem, 0.8rem + 0.32vw, 1rem);
-  line-height: 1.8;
   background-color: #fff;
   margin: 0;
   padding: 1em;
@@ -1365,7 +1371,6 @@ div.wpcf7 .wpcf7-spinner {
 @media (max-width: 800px) {
   .home__main-visual__content__img {
     width: 85%;
-    overflow: hidden;
     margin: 0 auto;
   }
 }
@@ -1398,7 +1403,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
 }
 .home__about__text {
   max-width: 1000px;
@@ -1411,16 +1415,10 @@ div.wpcf7 .wpcf7-spinner {
 @media (max-width: 800px) {
   .home__about__text {
     font-size: 1.1rem;
-    letter-spacing: 0.1em;
     line-height: 1.7;
     padding: 30px 15px;
     margin: 50px auto;
   }
-}
-.home__about__text p {
-  font-size: 16px;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
 }
 
 .home__news {
@@ -1468,7 +1466,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
 }
 .home__news__content__title__button {
   font-size: 16px;
@@ -1578,7 +1575,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
   line-height: 1.8;
 }
 .home__service__content {
@@ -1689,7 +1685,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
 }
 .home__flow__title2 {
   margin: 120px 0 70px;
@@ -1700,7 +1695,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
 }
 .home__flow__list {
   max-width: 1000px;
@@ -1710,7 +1704,6 @@ div.wpcf7 .wpcf7-spinner {
   background-color: #fff;
   border-radius: 70px;
   font-size: 20px;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .home__flow__list {
@@ -1828,7 +1821,6 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  letter-spacing: 2px;
   color: #fff;
 }
 .home__works__content {
@@ -1904,7 +1896,6 @@ div.wpcf7 .wpcf7-spinner {
   background-color: #fff;
   text-align: center;
   padding: 180px 0 0;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .about__title {
@@ -1925,6 +1916,21 @@ div.wpcf7 .wpcf7-spinner {
   letter-spacing: 4px;
   display: block;
 }
+.about__rule {
+  text-align: center;
+  padding: 50px 0;
+}
+.about__rule__title {
+  font-size: clamp(1.75rem, 1.375rem + 1.6vw, 2.375rem);
+  border-bottom: none;
+  padding-bottom: 30px;
+}
+.about__rule__text {
+  text-align: left;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+}
 .about__concept {
   text-align: center;
   padding: 50px 0;
@@ -1942,7 +1948,7 @@ div.wpcf7 .wpcf7-spinner {
 .about__concept__body {
   background-color: #fff;
   border-radius: 50px;
-  padding: 20px;
+  padding: 30px 20px;
 }
 .about__concept__body__text {
   margin-bottom: 50px;
@@ -2103,7 +2109,6 @@ date.php 共通
   background-color: #fff;
   text-align: center;
   padding: 180px 0 0;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .news__title {
@@ -2204,7 +2209,6 @@ date.php 共通
   background-color: #fff;
   text-align: center;
   padding: 180px 0 0;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .works__title {
@@ -2300,7 +2304,6 @@ date.php 共通
   background-color: #fff;
   text-align: center;
   padding: 180px 0 0;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .contact__title {
@@ -2369,7 +2372,6 @@ date.php 共通
   height: 300px;
   text-align: center;
   padding: 100px 0 0;
-  letter-spacing: 0.1em;
   font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
 }
 @media (max-width: 800px) {
@@ -2387,7 +2389,6 @@ date.php 共通
   background-color: #fff;
   text-align: center;
   padding: 180px 0 0;
-  letter-spacing: 0.1em;
 }
 @media (max-width: 800px) {
   .single-works__title {

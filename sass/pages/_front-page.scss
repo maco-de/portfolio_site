@@ -94,7 +94,6 @@
             border-radius: 40px;
             @include media-query {
                 width: 85%;
-                overflow: hidden;
                 margin: 0 auto;
             }
             img {
@@ -127,7 +126,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 2px;
         }
     }
     &__text {
@@ -139,15 +137,9 @@
         border-radius: 70px;
         @include media-query {
             font-size: 1.1rem;
-            letter-spacing: 0.1em;
             line-height: 1.7;
             padding: 30px 15px;
             margin: 50px auto;
-        }
-        & p {
-            font-size: 16px;
-            letter-spacing: 0.1em;
-            line-height: 1.8;
         }
     }
 }
@@ -182,7 +174,6 @@
                 font-size: 20px;
                 font-weight: bold;
                 margin-top: 10px;
-                letter-spacing: 2px;
             }
             &__button {
                 font-size: 16px;
@@ -279,7 +270,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 2px;
             line-height: 1.8;
         }
     }
@@ -368,7 +358,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 2px;
         }
     }
     &__title2 {
@@ -379,7 +368,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 2px;
         }
     }
     &__list {
@@ -390,7 +378,6 @@
         background-color: $color-white;
         border-radius: 70px;
         font-size: 20px;
-        letter-spacing: 0.1em;
         @include media-query {
             padding: 50px 20px;
             font-size: 16px;
@@ -487,7 +474,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 2px;
             color: $color-white;
         }
     }
