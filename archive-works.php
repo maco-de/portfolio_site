@@ -47,8 +47,8 @@
 
                         <article class="works__content__article">
                             <a class="works__content__article__link" href="<?php the_permalink(); ?>">
-                                <img class="works__content__article__link__img" src="<?php the_field('works_img'); ?>" alt="<?php the_field('works_ttl'); ?>">
-                                <p class="works__content__article__link__title"><?php the_field('works_ttl'); ?>
+                                <img class="works__content__article__link__img" src="<?php the_field('works_img'); ?>" alt="<?php the_field('works_title'); ?>">
+                                <p class="works__content__article__link__title"><?php the_field('works_title'); ?>
                                     <time class="card_time"><?php the_time('Y.m.d'); ?></time>
                                 </p>
                             </a>

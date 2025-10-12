@@ -8,7 +8,7 @@
         <p class="home__main-visual__title">フリーランスフロントエンドエンジニア</p>
         <div class="home__main-visual__content">
             <div class="home__main-visual__content__text">
-                <p>コーディング代行、<br>ホームページ修正、<br>WordPressの構築など、<br>Web制作のお仕事を承っております。</p>
+                <p>コーディング代行・外注、<br>ホームページ修正、<br>WordPressの構築など、<br>Web制作のお仕事を承っております。</p>
                 <div class="circle_block">
                     <svg class="circleText" viewBox="0 0 100 100">
                         <path id="circle" class="circleText__circle" d="M 0 50 A 50 50 0 1 1 0 51 z" />
@@ -82,10 +82,12 @@
                 <p>ご覧いただきありがとうございます。
                     <br>フロントエンドエンジニア・寺内　惇によるフリーランス事務所『maco-de(マコード)』です。
                     <br>
-                    <br>フロントエンドエンジニアとしてコーディングはもちろんのこと、ホームページのちょっとした修正、またはお客様のお悩みのご相談までお承り致します。
+                    <br>フロントエンドエンジニアとしてチーム開発に向けた保守性の高いコーディングはもちろんのこと、ホームページのちょっとした修正、またはお客様のお悩みのご相談までお承り致します。
                     <br>個人事務所ならではのフットワークの軽さを活かし、お客様のニーズに細かくお応えいたします。
+                    <br>お見積もり、ご相談は無料ですので、御用の際はぜひお問い合わせください。
                     <br>
-                    お見積もり、ご相談は無料ですので、御用の際はぜひお問い合わせください。
+                    <br>また、コーディングルールや仕事への考え方等はABOUTページにて公開しております。
+                    <br>ご依頼の前に『詳細はこちら』のボタンからご参考までにご覧くださいませ。
                 </p>
                 <label class="popup__button" for="popup" id="txt_label">maco-de(マコード)とは？</label>
             </div>
@@ -130,7 +132,7 @@
                             <article class="home__news__content__post__article">
                                 <a href="<?php the_permalink(); ?>">
                                     <time><?php the_time('Y.m.d'); ?></time>
-                                    <p><?php the_field('news_ttl'); ?></p>
+                                    <p><?php the_field('news_title'); ?></p>
                                 </a>
                             </article>
 
@@ -156,20 +158,20 @@
                 <div class="home__service__content">
                     <div class="home__service__content__item1 fadein">
                         <h3>コーディング</h3>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/coding.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/coding.png" alt="コーディング">
                         <p>デザインを忠実に再現することはもちろんのこと、迅速にコーディングできるよう努めております。レスポンシブにも対応し、表示崩れしていないかを徹底検証いたします。
                             <br>納品後も他者が変更や修正をすることを考え、保守性の高いコーディングを意識しております。
                         </p>
                     </div>
                     <div class="home__service__content__item2 fadein">
                         <h3>WordPress構築</h3>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/web_site.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/web_site.png" alt="WordPress構築">
                         <p>WebサイトのWordPress化を致します。既存のデザインテンプレートはもちろん、オリジナルデザインでの構築も可能です。<br>デフォルトのブログ機能に加え、カスタム投稿の追加や、カスタムフィールド、お問合せフォームなどもご相談ください。
                         </p>
                     </div>
                     <div class="home__service__content__item3 fadein">
                         <h3>サイト改修</h3>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/reload.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/reload.png" alt="サイト改修">
                         <p>運用中のサイトにコンテンツを追加したり、レイアウトが崩れてしまっている所を直したい…などのお悩みがありましたらぜひご相談ください。
                             <br>一部分のみの修正や、写真の差し替えなど、どんなことでも迅速に対応致します。
                         </p>
@@ -192,7 +194,7 @@
                 <label for="check1">
                     <p>01</p>
                     <p>お問い合わせ</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="お問い合わせ">
                     <span class="arrow"></span>
                 </label>
                 <div class="faq_content">
@@ -205,7 +207,7 @@
                 <label for="check2">
                     <p>02</p>
                     <p>お見積もり</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="お見積もり">
                     <span class="arrow"></span>
                 </label>
                 <div class="faq_content">
@@ -218,7 +220,7 @@
                 <label for="check3">
                     <p>03</p>
                     <p>コーディング</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="コーディング">
                     <span class="arrow"></span>
                 </label>
                 <div class="faq_content">
@@ -231,7 +233,7 @@
                 <label for="check4">
                     <p>04</p>
                     <p>最終調整・納品</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="最終調整・納品">
                     <span class="arrow"></span>
                 </label>
                 <div class="faq_content">
@@ -297,7 +299,7 @@
                         <article class="home__works__content__article fadein">
                             <a href="<?php the_permalink(); ?>">
                                 <img class="home__works__content__article__img" src="<?php the_field('works_img'); ?>">
-                                <p><?php the_field('works_ttl'); ?></p>
+                                <p><?php the_field('works_title'); ?></p>
                             </a>
                         </article>
 

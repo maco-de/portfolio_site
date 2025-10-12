@@ -8,7 +8,6 @@
         background-color: $color-white;
         text-align: center;
         padding: 180px 0 0;
-        letter-spacing: 0.1em;
         @include media-query {
             height: 200px;
             padding: 90px 0 0;
@@ -68,8 +67,10 @@
                     position: absolute;
                     background-color: rgb(255, 255, 255, 0.8);
                     width: 100%;
+                    left: 0;
                     bottom: 0;
                     text-align: center;
+                    letter-spacing: 1px;
                     padding: 5px 0;
                 }
             }

@@ -49,7 +49,7 @@
                             <article class="news__content__post__article">
                                 <a href="<?php the_permalink(); ?>">
                                     <time><?php the_time('Y.m.d'); ?></time>
-                                    <p><?php the_field('news_ttl'); ?></p>
+                                    <p><?php the_field('news_title'); ?></p>
                                 </a>
                             </article>
 

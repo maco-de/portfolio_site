@@ -26,6 +26,7 @@
 .faq_wrap label p {
     font-size: clamp(1.5rem, 1.05rem + 1.92vw, 2.25rem);
     color: $color-white;
+    line-height: 1.2;
 }
 .faq_wrap label p:nth-child(2) {
     font-size: clamp(1rem, 0.7rem + 1.28vw, 1.5rem);
@@ -78,7 +79,6 @@
 }
 .faq_content p {
     font-size: clamp(0.875rem, 0.8rem + 0.32vw, 1rem);
-    line-height: 1.8;
     background-color: $color-white;
     margin: 0;
     padding: 1em;
