@@ -791,8 +791,8 @@ textarea:focus {
 }
 @media (max-width: 800px) {
   .popup__button:hover::before {
-    top: auto;
-    left: auto;
+    top: 6px;
+    left: 6px;
   }
 }
 .popup__button::before {
@@ -1039,8 +1039,6 @@ div.wpcf7 .wpcf7-spinner {
           box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.6);
   z-index: 90;
   opacity: 0;
-  line-height: 2;
-  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
 }
 @media (max-width: 800px) {
   #window {
@@ -1049,7 +1047,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 #window h3 {
-  font-size: clamp(0.938rem, 0.733rem + 1.02vw, 1.5rem);
+  font-size: clamp(1rem, 0.7rem + 1.28vw, 1.5rem);
   text-align: left;
 }
 
@@ -1140,19 +1138,30 @@ div.wpcf7 .wpcf7-spinner {
   opacity: 0.7;
 }
 
-.faq_wrap {
+.faq__wrap {
   width: 90%;
   border: 2px solid #869dab;
   border-radius: 10px;
   margin: 0 auto 70px;
 }
 @media (max-width: 800px) {
-  .faq_wrap {
+  .faq__wrap {
     margin: 0 auto 50px;
   }
 }
-
-.faq_wrap label {
+.faq__wrap input {
+  display: none;
+}
+.faq__wrap input:checked ~ .faq__wrap__content {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+.faq__wrap input:checked ~ label span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.faq__wrap label {
   padding: 10px;
   background: #869dab;
   display: -webkit-box;
@@ -1167,28 +1176,20 @@ div.wpcf7 .wpcf7-spinner {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.faq_wrap label p {
+.faq__wrap label p {
   font-size: clamp(1.5rem, 1.05rem + 1.92vw, 2.25rem);
   color: #fff;
   line-height: 1.2;
 }
-
-.faq_wrap label p:nth-child(2) {
+.faq__wrap label p:nth-child(2) {
   font-size: clamp(1rem, 0.7rem + 1.28vw, 1.5rem);
   color: #fff;
 }
-
-.faq_wrap label img {
+.faq__wrap label img {
   width: clamp(1.563rem, 1.188rem + 1.6vw, 2.188rem);
   height: clamp(1.563rem, 1.188rem + 1.6vw, 2.188rem);
 }
-
-.faq_wrap input {
-  display: none;
-}
-
-.arrow {
+.faq__wrap label span {
   display: block;
   position: absolute;
   right: 20px;
@@ -1204,9 +1205,7 @@ div.wpcf7 .wpcf7-spinner {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
-
-.arrow::before,
-.arrow::after {
+.faq__wrap label span::before, .faq__wrap label span::after {
   content: "";
   position: absolute;
   display: block;
@@ -1214,20 +1213,17 @@ div.wpcf7 .wpcf7-spinner {
   height: 3px;
   background-color: #fff;
 }
-
-.arrow::before {
+.faq__wrap label span::before {
   left: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-
-.arrow::after {
+.faq__wrap label span::after {
   right: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-
-.faq_content {
+.faq__wrap__content {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
@@ -1235,28 +1231,14 @@ div.wpcf7 .wpcf7-spinner {
   transition: 0.5s;
   overflow: hidden;
 }
-
-.faq_content p {
-  font-size: clamp(0.875rem, 0.8rem + 0.32vw, 1rem);
+.faq__wrap__content p {
   background-color: #fff;
   margin: 0;
   padding: 1em;
   border-radius: 0 0 8px 8px;
 }
-
-.faq_content a {
+.faq__wrap__content a {
   color: #869dab;
-}
-
-.faq_wrap input:checked ~ .faq_content {
-  max-height: 200px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.faq_wrap input:checked ~ label .arrow {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .home__start {
@@ -1415,10 +1397,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 @media (max-width: 800px) {
   .home__about__text {
-    font-size: 1.1rem;
-    line-height: 1.7;
     padding: 30px 15px;
-    margin: 50px auto;
   }
 }
 
@@ -1598,7 +1577,7 @@ div.wpcf7 .wpcf7-spinner {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 50px 0 60px;
+    margin: 50px 0 80px;
   }
 }
 .home__service__content__item1, .home__service__content__item2, .home__service__content__item3 {
@@ -1673,7 +1652,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 @media (max-width: 800px) {
   .home__flow {
-    padding: 30px 0 70px;
+    padding: 10px 0 70px;
     clip-path: polygon(100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
   }
 }
