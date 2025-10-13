@@ -189,54 +189,54 @@
                 <h2>FLOW</h2>
                 <p>お仕事の流れ</p>
             </div>
-            <div class="faq_wrap fadein">
+            <div class="faq__wrap fadein">
                 <input type="checkbox" id="check1">
                 <label for="check1">
                     <p>01</p>
                     <p>お問い合わせ</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="お問い合わせ">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
-                <div class="faq_content">
+                <div class="faq__wrap__content">
                     <p><a href="<?php echo home_url(); ?>/contact">『お問い合わせフォーム』</a>よりご依頼、ご相談ください。<br>
                         ご相談いただいた際は、記載のメールアドレスへご返信させていただきます。</p>
                 </div>
             </div>
-            <div class="faq_wrap fadein">
+            <div class="faq__wrap fadein">
                 <input type="checkbox" id="check2">
                 <label for="check2">
                     <p>02</p>
                     <p>お見積もり</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="お見積もり">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
-                <div class="faq_content">
+                <div class="faq__wrap__content">
                     <p>デザインカンプやラフデザインを拝見させていただきます。<br>
                         デザインのボリュームや、実装する機能などを元にお見積もり致します。</p>
                 </div>
             </div>
-            <div class="faq_wrap fadein">
+            <div class="faq__wrap fadein">
                 <input type="checkbox" id="check3">
                 <label for="check3">
                     <p>03</p>
                     <p>コーディング</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="コーディング">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
-                <div class="faq_content">
+                <div class="faq__wrap__content">
                     <p>ご希望の初稿提出日に合わせ、デザインに忠実にコーディングしていきます。<br>
                         作業中は定期的に連絡を取り、何かあればすぐに「報連相」を致します。</p>
                 </div>
             </div>
-            <div class="faq_wrap fadein">
+            <div class="faq__wrap fadein">
                 <input type="checkbox" id="check4">
                 <label for="check4">
                     <p>04</p>
                     <p>最終調整・納品</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="最終調整・納品">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
-                <div class="faq_content">
+                <div class="faq__wrap__content">
                     <p>コーディングデータを提出し、確認していただきます。<br>
                         修正や調整がございましたら対応致します。<br>
                         ZIPやFTP、Git(GitHub,Bitbucket)による納品が可能です。
