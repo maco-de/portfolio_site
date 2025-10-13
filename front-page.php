@@ -195,7 +195,7 @@
                     <p>01</p>
                     <p>お問い合わせ</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="お問い合わせ">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
                 <div class="faq__wrap__content">
                     <p><a href="<?php echo home_url(); ?>/contact">『お問い合わせフォーム』</a>よりご依頼、ご相談ください。<br>
@@ -208,7 +208,7 @@
                     <p>02</p>
                     <p>お見積もり</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="お見積もり">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
                 <div class="faq__wrap__content">
                     <p>デザインカンプやラフデザインを拝見させていただきます。<br>
@@ -221,7 +221,7 @@
                     <p>03</p>
                     <p>コーディング</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="コーディング">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
                 <div class="faq__wrap__content">
                     <p>ご希望の初稿提出日に合わせ、デザインに忠実にコーディングしていきます。<br>
@@ -234,7 +234,7 @@
                     <p>04</p>
                     <p>最終調整・納品</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="最終調整・納品">
-                    <span class="arrow"></span>
+                    <span></span>
                 </label>
                 <div class="faq__wrap__content">
                     <p>コーディングデータを提出し、確認していただきます。<br>
