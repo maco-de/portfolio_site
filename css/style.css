@@ -499,11 +499,13 @@ textarea:focus {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.header__nav__list a:hover::before {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (hover: hover) {
+  .header__nav__list a:hover::before {
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 .header__nav__list > li + li {
   margin-left: 30px;
@@ -692,11 +694,13 @@ textarea:focus {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.footer__menu__nav__list a:hover::before {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (hover: hover) {
+  .footer__menu__nav__list a:hover::before {
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 .footer__menu__logo {
   font-size: 3rem;
@@ -729,24 +733,15 @@ textarea:focus {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.button01:hover {
-  -webkit-transform: translate(5px, 5px);
-          transform: translate(5px, 5px);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #fff;
-  background-color: #757575;
-  border: #757575 solid 1px;
-}
-@media (max-width: 800px) {
+@media (hover: hover) {
   .button01:hover {
-    -webkit-transform: none;
-            transform: none;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-    color: #757575;
-    background-color: #fff;
-    border: #f0f0f0 solid 1px;
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    background-color: #757575;
+    border: #757575 solid 1px;
   }
 }
 
@@ -757,7 +752,7 @@ textarea:focus {
   letter-spacing: 0.1em;
   color: #fff;
   font-weight: 400;
-  outline: 1px solid #757575;
+  border: 1px solid #757575;
   display: block;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -783,16 +778,10 @@ textarea:focus {
           animation-iteration-count: infinite;
   white-space: nowrap;
 }
-.popup__button:hover::before {
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-@media (max-width: 800px) {
+@media (hover: hover) {
   .popup__button:hover::before {
-    top: 6px;
-    left: 6px;
+    top: 0;
+    left: 0;
   }
 }
 .popup__button::before {
@@ -944,6 +933,26 @@ textarea:focus {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (hover: hover) {
+  .previous:hover,
+  .submit:hover,
+  .confirm:hover {
+    opacity: 0.7;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.previous,
+.confirm {
+  background-color: #869dab;
+}
+
+.submit {
+  background-color: #d55555;
 }
 
 .confirm {
@@ -960,24 +969,6 @@ textarea:focus {
   font-weight: bold;
   width: 170px;
   margin: 30px 0;
-}
-
-.previous,
-.confirm {
-  background-color: #869dab;
-}
-
-.submit {
-  background-color: #d55555;
-}
-
-.submit:hover,
-.previous:hover {
-  opacity: 0.6;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 div.wpcf7 .wpcf7-spinner {
@@ -1070,6 +1061,8 @@ div.wpcf7 .wpcf7-spinner {
   border-radius: 5px;
   z-index: 100;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media (max-width: 800px) {
   #btn_cloth {
@@ -1080,10 +1073,11 @@ div.wpcf7 .wpcf7-spinner {
   }
 }
 
-#btn_cloth:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  #btn_cloth:hover {
+    opacity: 0.7;
+  }
 }
-
 #btn_cloth span,
 #btn_cloth span::before {
   display: block;
@@ -1132,10 +1126,6 @@ div.wpcf7 .wpcf7-spinner {
 }
 #txt_label {
   cursor: pointer;
-}
-
-#txt_label:hover {
-  opacity: 0.7;
 }
 
 .faq__wrap {
@@ -1494,9 +1484,11 @@ div.wpcf7 .wpcf7-spinner {
   transition: 0.3s;
   border-bottom: solid 1px transparent;
 }
-.home__news__content__post__article:hover p {
-  color: rgba(134, 157, 171, 0.8);
-  border-bottom: rgba(134, 157, 171, 0.8) solid 1px;
+@media (hover: hover) {
+  .home__news__content__post__article:hover p {
+    color: rgba(134, 157, 171, 0.8);
+    border-bottom: rgba(134, 157, 171, 0.8) solid 1px;
+  }
 }
 
 .home__service {
@@ -1855,9 +1847,11 @@ div.wpcf7 .wpcf7-spinner {
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
 }
-.home__works__content__article:hover .home__works__content__article__img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (hover: hover) {
+  .home__works__content__article:hover .home__works__content__article__img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 .home__works__content__article p {
   position: absolute;
@@ -2171,9 +2165,11 @@ date.php 共通
   transition: 0.3s;
   border-bottom: solid 1px transparent;
 }
-.news__content__post__article:hover p {
-  color: rgba(134, 157, 171, 0.8);
-  border-bottom: rgba(134, 157, 171, 0.8) solid 1px;
+@media (hover: hover) {
+  .news__content__post__article:hover p {
+    color: rgba(134, 157, 171, 0.8);
+    border-bottom: rgba(134, 157, 171, 0.8) solid 1px;
+  }
 }
 .news__content__post h1 {
   text-align: center;
@@ -2263,9 +2259,11 @@ date.php 共通
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
 }
-.works__content__article__link__img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (hover: hover) {
+  .works__content__article__link__img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 .works__content__article__link__title {
   position: absolute;
