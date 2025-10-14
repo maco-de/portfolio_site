@@ -191,6 +191,7 @@
                 width: 100%;
                 padding: 30px 30px 100px;
             }
+
             &__article {
                 text-align: left;
                 border-bottom: $color-sub solid 1px;
@@ -212,9 +213,11 @@
                     transition: 0.3s;
                     border-bottom: solid 1px transparent;
                 }
-                &:hover p {
-                    color: rgb(134, 157, 171, 0.8);
-                    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                @media (hover: hover) {
+                    &:hover p {
+                        color: rgb(134, 157, 171, 0.8);
+                        border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                    }
                 }
             }
         }
@@ -505,8 +508,10 @@
                 margin: 0 auto;
                 transition: transform 0.6s ease;
             }
-            &:hover &__img {
-                transform: scale(1.1);
+            @media (hover: hover) {
+                &:hover &__img {
+                    transform: scale(1.1);
+                }
             }
             & p {
                 position: absolute;

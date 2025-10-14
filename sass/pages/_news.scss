@@ -77,9 +77,11 @@ date.php 共通
                     transition: 0.3s;
                     border-bottom: solid 1px transparent;
                 }
-                &:hover p {
-                    color: rgb(134, 157, 171, 0.8);
-                    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                @media (hover: hover) {
+                    &:hover p {
+                        color: rgb(134, 157, 171, 0.8);
+                        border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                    }
                 }
             }
             & h1 {
