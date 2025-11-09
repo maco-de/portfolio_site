@@ -109,3 +109,57 @@ $(function () {
             },
         });
 });
+
+window.addEventListener("load", function () {
+    let bubbleContainer = document.querySelector(".bubble-container");
+
+    const craetebubble = () => {
+        let bubble = document.createElement("span");
+        bubble.className = "bubble";
+
+        minSize = 5;
+        maxSize = 15;
+
+        let bubbleSize = Math.random() * (maxSize - minSize) + minSize;
+
+        bubble.style.width = bubbleSize + "px";
+        bubble.style.height = bubbleSize + "px";
+
+        bubble.style.left = Math.random() * 100 + "%";
+
+        bubbleContainer.appendChild(bubble);
+
+        setTimeout(() => {
+            bubble.remove();
+        }, 10000);
+    };
+
+    setInterval(craetebubble, 300);
+});
+
+window.addEventListener("load", function () {
+    let bubbleContainer2 = document.querySelector(".bubble-container2");
+
+    const craetebubble2 = () => {
+        let bubble2 = document.createElement("span");
+        bubble2.className = "bubble2";
+
+        minSize = 5;
+        maxSize = 15;
+
+        let bubble2Size = Math.random() * (maxSize - minSize) + minSize;
+
+        bubble2.style.width = bubble2Size + "px";
+        bubble2.style.height = bubble2Size + "px";
+
+        bubble2.style.left = Math.random() * 100 + "%";
+
+        bubbleContainer2.appendChild(bubble2);
+
+        setTimeout(() => {
+            bubble2.remove();
+        }, 15000);
+    };
+
+    setInterval(craetebubble2, 300);
+});

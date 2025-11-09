@@ -12,18 +12,13 @@
     padding: 8px 5px;
     border-radius: 10px;
     transition: 0.5s;
-    &:hover {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-        color: $color-white;
-        background-color: $color-text;
-        border: $color-text solid 1px;
-        @include media-query {
-            transform: none;
-            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-            color: $color-text;
-            background-color: $color-white;
-            border: $color-sub solid 1px;
+    @media (hover: hover) {
+        &:hover {
+            transform: translate(5px, 5px);
+            box-shadow: none;
+            color: $color-white;
+            background-color: $color-text;
+            border: $color-text solid 1px;
         }
     }
 }
@@ -35,7 +30,7 @@
     letter-spacing: 0.1em;
     color: $color-white;
     font-weight: 400;
-    outline: 1px solid $color-text;
+    border: 1px solid $color-text;
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -53,13 +48,10 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     white-space: nowrap;
-    &:hover::before {
-        top: 0;
-        left: 0;
-        transition: all 0.3s;
-        @include media-query {
-            top: 6px;
-            left: 6px;
+    @media (hover: hover) {
+        &:hover::before {
+            top: 0;
+            left: 0;
         }
     }
     &::before {

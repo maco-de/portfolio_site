@@ -111,110 +111,113 @@
     padding: 40px 0 50px;
     background-color: $color-sub;
     text-align: right;
+    position: relative;
+    z-index: 0;
     @include media-query {
         margin: 0 auto;
         padding: 20px 0 10px;
     }
-    & container {
-        margin: 50px auto;
-    }
-    &__title {
-        max-width: 1000px;
-        margin: 0 auto;
-        & p {
-            text-align: right;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    }
-    &__text {
-        max-width: 1000px;
-        text-align: left;
-        margin: 50px auto;
-        padding: 50px;
-        background-color: $color-white;
-        border-radius: 70px;
-        @include media-query {
-            padding: 30px 15px;
-        }
-    }
-}
-
-// お知らせ
-
-.home__news {
-    padding: 40px 0 80px;
-    background-color: $color-sub;
-    text-align: right;
-    @include media-query {
-        padding: 40px 0;
-    }
-    &__content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @include media-query {
-            flex-direction: column;
-            position: relative;
-        }
+    &__maco-de {
         &__title {
-            padding: 5px 10px;
-            font-size: clamp(1rem, 0.85rem + 0.64vw, 1.25rem);
-            margin: 30px 0 70px;
-            display: inline-block;
-            text-align: center;
-            @include media-query {
-                margin: 30px 0 50px;
-            }
+            max-width: 1000px;
+            margin: 0 auto;
             & p {
+                text-align: right;
                 font-size: 20px;
                 font-weight: bold;
                 margin-top: 10px;
             }
-            &__button {
-                font-size: 16px;
-                @include media-query {
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, 0) !important;
-                    bottom: 20px;
-                }
-            }
         }
-        &__post {
+        &__text {
+            max-width: 1000px;
+            text-align: left;
+            margin: 50px auto;
+            padding: 50px;
             background-color: $color-white;
             border-radius: 70px;
-            width: 70%;
-            padding: 50px;
             @include media-query {
-                width: 100%;
-                padding: 30px 30px 100px;
+                padding: 30px 15px;
             }
-            &__article {
-                text-align: left;
-                border-bottom: $color-sub solid 1px;
-                padding-bottom: 20px;
-                padding-top: 20px;
-                &:first-child {
-                    padding-top: 0;
-                }
-                &:last-child {
-                    border-bottom: none;
-                    padding-bottom: 0;
-                }
-                & time {
-                    display: block;
+        }
+    }
+
+    // お知らせ
+
+    &__news {
+        padding: 40px 0 80px;
+        text-align: right;
+        @include media-query {
+            padding: 40px 0;
+        }
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include media-query {
+                flex-direction: column;
+                position: relative;
+            }
+            &__title {
+                padding: 5px 10px;
+                font-size: clamp(1rem, 0.85rem + 0.64vw, 1.25rem);
+                margin: 30px 0 70px;
+                display: inline-block;
+                text-align: center;
+                @include media-query {
+                    margin: 30px 0 50px;
                 }
                 & p {
+                    font-size: 20px;
+                    font-weight: bold;
                     margin-top: 10px;
-                    display: inline-block;
-                    transition: 0.3s;
-                    border-bottom: solid 1px transparent;
                 }
-                &:hover p {
-                    color: rgb(134, 157, 171, 0.8);
-                    border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                &__button {
+                    font-size: 16px;
+                    @include media-query {
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, 0) !important;
+                        bottom: 20px;
+                    }
+                }
+            }
+            &__post {
+                background-color: $color-white;
+                border-radius: 70px;
+                width: 70%;
+                padding: 50px;
+                @include media-query {
+                    width: 100%;
+                    padding: 30px 30px 100px;
+                }
+
+                &__article {
+                    text-align: left;
+                    border-bottom: $color-sub solid 1px;
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                    & time {
+                        display: block;
+                    }
+                    & p {
+                        margin-top: 10px;
+                        display: inline-block;
+                        transition: 0.3s;
+                        border-bottom: solid 1px transparent;
+                    }
+                    @media (hover: hover) {
+                        &:hover p {
+                            color: rgb(134, 157, 171, 0.8);
+                            border-bottom: rgb(134, 157, 171, 0.8) solid 1px;
+                        }
+                    }
                 }
             }
         }
@@ -505,8 +508,10 @@
                 margin: 0 auto;
                 transition: transform 0.6s ease;
             }
-            &:hover &__img {
-                transform: scale(1.1);
+            @media (hover: hover) {
+                &:hover &__img {
+                    transform: scale(1.1);
+                }
             }
             & p {
                 position: absolute;

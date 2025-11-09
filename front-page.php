@@ -72,30 +72,6 @@
             </g>
         </svg>
     </div>
-    <section class="home__about">
-        <div class="content-width fadein">
-            <div class="home__about__title">
-                <h2>ABOUT</h2>
-                <p>maco-deについて</p>
-            </div>
-            <div class="home__about__text fadein">
-                <p>ご覧いただきありがとうございます。
-                    <br>フロントエンドエンジニア・寺内　惇によるフリーランス事務所『maco-de(マコード)』です。
-                    <br>
-                    <br>フロントエンドエンジニアとしてチーム開発に向けた保守性の高いコーディングはもちろんのこと、ホームページのちょっとした修正、またはお客様のお悩みのご相談までお承り致します。
-                    <br>個人事務所ならではのフットワークの軽さを活かし、お客様のニーズに細かくお応えいたします。
-                    <br>お見積もり、ご相談は無料ですので、御用の際はぜひお問い合わせください。
-                    <br>
-                    <br>また、コーディングルールや仕事への考え方等はABOUTページにて公開しております。
-                    <br>ご依頼の前に『詳細はこちら』のボタンからご参考までにご覧くださいませ。
-                </p>
-                <label class="popup__button" for="popup" id="txt_label">maco-de(マコード)とは？</label>
-            </div>
-            <div class="fadein2">
-                <a class="button01" href="<?php echo home_url(); ?>/about/">詳細はこちら</a>
-            </div>
-        </div>
-    </section>
     <input type="checkbox" id="popup" class="popup">
     <div id="overlay">
         <label for="popup" id="bg_gray"></label>
@@ -112,35 +88,57 @@
             </p>
         </div>
     </div>
-
-
-    <!-- ニュース -->
-
-    <section class="home__news">
-        <div class="content-width">
-            <div class="home__news__content fadein">
-                <div class="home__news__content__title">
-                    <h2>NEWS</h2>
-                    <p>お知らせ</p>
-                    <a class="home__news__content__title__button button01" href="<?php echo home_url(); ?>/news/">お知らせ一覧へ</a>
+    <section class="home__about">
+        <div class="bubble-container">
+            <div class="content-width">
+                <div class="home__about__maco-de">
+                    <div class="home__about__maco-de__title fadein">
+                        <h2>ABOUT</h2>
+                        <p>maco-deについて</p>
+                    </div>
+                    <div class="home__about__maco-de__text fadein">
+                        <p>ご覧いただきありがとうございます。
+                            <br>フロントエンドエンジニア・寺内　惇によるフリーランス事務所『maco-de(マコード)』です。
+                            <br>
+                            <br>フロントエンドエンジニアとしてチーム開発に向けた保守性の高いコーディングはもちろんのこと、ホームページのちょっとした修正、またはお客様のお悩みのご相談までお承り致します。
+                            <br>個人事務所ならではのフットワークの軽さを活かし、お客様のニーズに細かくお応えいたします。
+                            <br>お見積もり、ご相談は無料ですので、御用の際はぜひお問い合わせください。
+                            <br>
+                            <br>また、コーディングルールや仕事への考え方等はABOUTページにて公開しております。
+                            <br>ご依頼の前に『詳細はこちら』のボタンからご参考までにご覧くださいませ。
+                        </p>
+                        <label class="popup__button" for="popup" id="txt_label">maco-de(マコード)とは？</label>
+                    </div>
+                    <div class="fadein2">
+                        <a class="button01" href="<?php echo home_url(); ?>/about/">詳細はこちら</a>
+                    </div>
                 </div>
-                <div class="home__news__content__post">
+                <div class="home__about__news">
+                    <div class="home__about__news__content fadein">
+                        <div class="home__about__news__content__title">
+                            <h2>NEWS</h2>
+                            <p>お知らせ</p>
+                            <a class="home__about__news__content__title__button button01" href="<?php echo home_url(); ?>/news/">お知らせ一覧へ</a>
+                        </div>
+                        <div class="home__about__news__content__post">
 
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
+                            <?php if (have_posts()) : ?>
+                                <?php while (have_posts()) : the_post(); ?>
 
-                            <article class="home__news__content__post__article">
-                                <a href="<?php the_permalink(); ?>">
-                                    <time><?php the_time('Y.m.d'); ?></time>
-                                    <p><?php the_field('news_title'); ?></p>
-                                </a>
-                            </article>
+                                    <article class="home__about__news__content__post__article">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <time><?php the_time('Y.m.d'); ?></time>
+                                            <p><?php the_field('news_title'); ?></p>
+                                        </a>
+                                    </article>
 
-                        <?php endwhile; ?>
-                    <?php else : ?>
-                        <p>まだ投稿はありません。</p>
-                    <?php endif;
-                    wp_reset_postdata(); ?>
+                                <?php endwhile; ?>
+                            <?php else : ?>
+                                <p>まだ投稿はありません。</p>
+                            <?php endif;
+                            wp_reset_postdata(); ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,98 +182,101 @@
     <!-- ご依頼の流れ -->
 
     <section class="home__flow">
-        <div class="content-width">
-            <div class="home__flow__title fadein">
-                <h2>FLOW</h2>
-                <p>お仕事の流れ</p>
-            </div>
-            <div class="faq__wrap fadein">
-                <input type="checkbox" id="check1">
-                <label for="check1">
-                    <p>01</p>
-                    <p>お問い合わせ</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="お問い合わせ">
-                    <span></span>
-                </label>
-                <div class="faq__wrap__content">
-                    <p><a href="<?php echo home_url(); ?>/contact">『お問い合わせフォーム』</a>よりご依頼、ご相談ください。<br>
-                        ご相談いただいた際は、記載のメールアドレスへご返信させていただきます。</p>
+        <div class="bubble-container2">
+            <div class="content-width">
+                <div class="home__flow__title fadein">
+                    <h2>FLOW</h2>
+                    <p>お仕事の流れ</p>
                 </div>
-            </div>
-            <div class="faq__wrap fadein">
-                <input type="checkbox" id="check2">
-                <label for="check2">
-                    <p>02</p>
-                    <p>お見積もり</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="お見積もり">
-                    <span></span>
-                </label>
-                <div class="faq__wrap__content">
-                    <p>デザインカンプやラフデザインを拝見させていただきます。<br>
-                        デザインのボリュームや、実装する機能などを元にお見積もり致します。</p>
+                <div class="faq__wrap fadein">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">
+                        <p>01</p>
+                        <p>お問い合わせ</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/mail.png" alt="お問い合わせ">
+                        <span></span>
+                    </label>
+                    <div class="faq__wrap__content">
+                        <p><a href="<?php echo home_url(); ?>/contact">『お問い合わせフォーム』</a>よりご依頼、ご相談ください。<br>
+                            ご相談いただいた際は、記載のメールアドレスへご返信させていただきます。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq__wrap fadein">
-                <input type="checkbox" id="check3">
-                <label for="check3">
-                    <p>03</p>
-                    <p>コーディング</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="コーディング">
-                    <span></span>
-                </label>
-                <div class="faq__wrap__content">
-                    <p>ご希望の初稿提出日に合わせ、デザインに忠実にコーディングしていきます。<br>
-                        作業中は定期的に連絡を取り、何かあればすぐに「報連相」を致します。</p>
+                <div class="faq__wrap fadein">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">
+                        <p>02</p>
+                        <p>お見積もり</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/yen.png" alt="お見積もり">
+                        <span></span>
+                    </label>
+                    <div class="faq__wrap__content">
+                        <p>デザインカンプやラフデザインを拝見させていただきます。<br>
+                            デザインのボリュームや、実装する機能などを元にお見積もり致します。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq__wrap fadein">
-                <input type="checkbox" id="check4">
-                <label for="check4">
-                    <p>04</p>
-                    <p>最終調整・納品</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="最終調整・納品">
-                    <span></span>
-                </label>
-                <div class="faq__wrap__content">
-                    <p>コーディングデータを提出し、確認していただきます。<br>
-                        修正や調整がございましたら対応致します。<br>
-                        ZIPやFTP、Git(GitHub,Bitbucket)による納品が可能です。
+                <div class="faq__wrap fadein">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">
+                        <p>03</p>
+                        <p>コーディング</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/html_tag.png" alt="コーディング">
+                        <span></span>
+                    </label>
+                    <div class="faq__wrap__content">
+                        <p>ご希望の初稿提出日に合わせ、デザインに忠実にコーディングしていきます。<br>
+                            作業中は定期的に連絡を取り、何かあればすぐに「報連相」を致します。</p>
+                    </div>
+                </div>
+                <div class="faq__wrap fadein">
+                    <input type="checkbox" id="check4">
+                    <label for="check4">
+                        <p>04</p>
+                        <p>最終調整・納品</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/check.png" alt="最終調整・納品">
+                        <span></span>
+                    </label>
+                    <div class="faq__wrap__content">
+                        <p>コーディングデータを提出し、確認していただきます。<br>
+                            修正や調整がございましたら対応致します。<br>
+                            ZIPやFTP、Git(GitHub,Bitbucket)による納品が可能です。
+                        </p>
+                    </div>
+                </div>
+                <div class="fadein2">
+                    <a class="popup__button fadein" href="<?php echo home_url(); ?>/contact">お問い合わせはこちら</a>
+                </div>
+                <div class="home__flow__title2 fadein">
+                    <h2>PRICE</h2>
+                    <p>料金表</p>
+                </div>
+                <div class="home__flow__list fadein">
+                    <p>レスポンシブ対応込みのコーディングのお値段です</p>
+                    <dl>
+                        <dt>トップページ</dt>
+                        <dd>￥30,000～</dd>
+                        <dt>下層ページ(1ページ)</dt>
+                        <dd>￥10,000～</dd>
+                        <dt>LPコーディング</dt>
+                        <dd>￥40,000～</dd>
+                        <dt>アニメーション(1件につき)</dt>
+                        <dd>￥8,000～</dd>
+                        <dt>お問合せフォーム</dt>
+                        <dd>￥10,000～</dd>
+                        <dt>WordPress構築(デフォルトブログ機能含む)</dt>
+                        <dd>￥30,000～</dd>
+                        <dt>カスタム投稿・カスタムフィールド(ACF利用)追加</dt>
+                        <dd>￥10,000～</dd>
+                        <dt>既存サイトの修正</dt>
+                        <dd>要相談</dd>
+                    </dl>
+                    <p>※料金表の金額は、目安ですので予算に合わせてご相談ください。
+                        <br>※複雑すぎる実装に関しましては要相談でお願いいたします。
                     </p>
                 </div>
             </div>
-            <div class="fadein2">
-                <a class="popup__button fadein" href="<?php echo home_url(); ?>/contact">お問い合わせはこちら</a>
-            </div>
-            <div class="home__flow__title2 fadein">
-                <h2>PRICE</h2>
-                <p>料金表</p>
-            </div>
-            <div class="home__flow__list fadein">
-                <p>レスポンシブ対応込みのコーディングのお値段です</p>
-                <dl>
-                    <dt>トップページ</dt>
-                    <dd>￥30,000～</dd>
-                    <dt>下層ページ(1ページ)</dt>
-                    <dd>￥10,000～</dd>
-                    <dt>LPコーディング</dt>
-                    <dd>￥40,000～</dd>
-                    <dt>アニメーション(1件につき)</dt>
-                    <dd>￥8,000～</dd>
-                    <dt>お問合せフォーム</dt>
-                    <dd>￥10,000～</dd>
-                    <dt>WordPress構築(デフォルトブログ機能含む)</dt>
-                    <dd>￥30,000～</dd>
-                    <dt>カスタム投稿・カスタムフィールド(ACF利用)追加</dt>
-                    <dd>￥10,000～</dd>
-                    <dt>既存サイトの修正</dt>
-                    <dd>要相談</dd>
-                </dl>
-                <p>※料金表の金額は、目安ですので予算に合わせてご相談ください。
-                    <br>※複雑すぎる実装に関しましては要相談でお願いいたします。
-                </p>
-            </div>
         </div>
     </section>
+
 
     <!-- 制作実績 -->
 
