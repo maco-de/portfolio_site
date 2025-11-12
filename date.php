@@ -39,26 +39,28 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <div class="news__content">
-                <div class="news__content__sidebar"><?php get_sidebar(); ?></div>
-                <div class="news__content__post">
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <div class="news__content">
+                    <div class="news__content__sidebar"><?php get_sidebar(); ?></div>
+                    <div class="news__content__post">
 
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
-                            <article class="news__content__post__article">
-                                <a href="<?php the_permalink(); ?>">
-                                    <time><?php the_time('Y.m.d'); ?></time>
-                                    <p><?php the_field('news_title'); ?></p>
-                                </a>
-                            </article>
+                        <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                                <article class="news__content__post__article">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <time><?php the_time('Y.m.d'); ?></time>
+                                        <p><?php the_field('news_title'); ?></p>
+                                    </a>
+                                </article>
 
-                        <?php endwhile; ?>
-                    <?php else : ?>
-                        <p>まだ投稿はありません。</p>
-                    <?php endif;
-                    wp_reset_postdata(); ?>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <p>まだ投稿はありません。</p>
+                        <?php endif;
+                        wp_reset_postdata(); ?>
 
+                    </div>
                 </div>
             </div>
         </div>

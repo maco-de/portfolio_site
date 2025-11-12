@@ -89,7 +89,7 @@
         </div>
     </div>
     <section class="home__about">
-        <div class="bubble-container">
+        <div id="bubble-container" class="bubble-container">
             <div class="content-width">
                 <div class="home__about__maco-de">
                     <div class="home__about__maco-de__title fadein">
@@ -182,7 +182,7 @@
     <!-- ご依頼の流れ -->
 
     <section class="home__flow">
-        <div class="bubble-container2">
+        <div id="bubble-container2" class="bubble-container2">
             <div class="content-width">
                 <div class="home__flow__title fadein">
                     <h2>FLOW</h2>

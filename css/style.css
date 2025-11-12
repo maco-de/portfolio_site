@@ -416,15 +416,11 @@ textarea:focus {
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  -webkit-animation: bubbleUp 10s linear;
-          animation: bubbleUp 10s linear;
+  -webkit-animation-name: bubbleUp;
+          animation-name: bubbleUp;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   z-index: -1;
-}
-@media (max-width: 800px) {
-  .bubble {
-    -webkit-animation: bubbleUp 20s linear;
-            animation: bubbleUp 20s linear;
-  }
 }
 
 @-webkit-keyframes bubbleUp {
@@ -511,8 +507,10 @@ textarea:focus {
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  -webkit-animation: bubbleUp2 15s linear;
-          animation: bubbleUp2 15s linear;
+  -webkit-animation-name: bubbleUp2;
+          animation-name: bubbleUp2;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   z-index: -1;
 }
 
@@ -2260,6 +2258,8 @@ date.php 共通
 */
 .news {
   background-color: #f0f0f0;
+  position: relative;
+  z-index: 0;
 }
 .news__title {
   height: 300px;
@@ -2362,6 +2362,8 @@ date.php 共通
 
 .works {
   background-color: #f0f0f0;
+  position: relative;
+  z-index: 0;
 }
 .works__title {
   height: 300px;
@@ -2461,6 +2463,8 @@ date.php 共通
 
 .contact {
   background-color: #f0f0f0;
+  position: relative;
+  z-index: 0;
 }
 .contact__title {
   height: 300px;
@@ -2548,6 +2552,8 @@ date.php 共通
 
 .single-works {
   background-color: #f0f0f0;
+  position: relative;
+  z-index: 0;
 }
 .single-works__title {
   height: 300px;

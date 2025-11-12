@@ -206,7 +206,7 @@
     }
 }
 
-// 背景の泡
+// 背景の泡 ( 各ページ )
 
 .bubble-container {
     width: 100%;
@@ -219,11 +219,9 @@
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    animation: bubbleUp 10s linear;
+    animation-name: bubbleUp;
+    animation-timing-function: ease-out;
     z-index: -1;
-    @include media-query {
-        animation: bubbleUp 20s linear;
-    }
 }
 
 @keyframes bubbleUp {
@@ -268,7 +266,8 @@
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    animation: bubbleUp2 15s linear;
+    animation-name: bubbleUp2;
+    animation-timing-function: linear;
     z-index: -1;
 }
 

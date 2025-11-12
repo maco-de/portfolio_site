@@ -1,11 +1,11 @@
-<?php
+ContactConfirm or ContactComplete/phpsample<?php
 
-/**
- * ContactConfirm or ContactComplete/php
- * @package sample
- */
+                                            /**
+                                             * ContactConfirm or ContactComplete/php
+                                             * @package sample
+                                             */
 
-?>
+                                            ?>
 
 <?php get_header(); ?>
 
@@ -48,11 +48,13 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <div class="contact__content">
-                <p class=contact__content__text>以下の内容で送信してよろしいですか？</p>
-                <!-- フォーム -->
-                <?php echo do_shortcode('[contact-form-7 id="36efa91" title="コンタクトフォーム(確認画面)"]'); ?>
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <div class="contact__content">
+                    <p class=contact__content__text>以下の内容で送信してよろしいですか？</p>
+                    <!-- フォーム -->
+                    <?php echo do_shortcode('[contact-form-7 id="36efa91" title="コンタクトフォーム(確認画面)"]'); ?>
+                </div>
             </div>
         </div>
     </div>

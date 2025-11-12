@@ -23,7 +23,7 @@ $(function () {
 
 //　ハンバーガーメニュー
 $(function () {
-    $(".hamburger").click(function () {
+    $("#hamburger").click(function () {
         $(this).toggleClass("open");
         $(".header__nav").toggleClass("open");
     });
@@ -110,8 +110,15 @@ $(function () {
         });
 });
 
+// 背景の泡
+
 window.addEventListener("load", function () {
-    let bubbleContainer = document.querySelector(".bubble-container");
+    const bubbleContainer = document.getElementById("bubble-container");
+    const bubbleContainerHeight = bubbleContainer.offsetHeight;
+    const animationDurationInSeconds = bubbleContainerHeight / 100;
+    const setTimeoutDray = bubbleContainerHeight * 10;
+    const screenWidth = window.innerWidth;
+    const bubbleConcentration = 600 - 0.2 * screenWidth;
 
     const craetebubble = () => {
         let bubble = document.createElement("span");
@@ -124,42 +131,49 @@ window.addEventListener("load", function () {
 
         bubble.style.width = bubbleSize + "px";
         bubble.style.height = bubbleSize + "px";
-
         bubble.style.left = Math.random() * 100 + "%";
+        bubble.style.animationDuration = `${animationDurationInSeconds}s`;
 
         bubbleContainer.appendChild(bubble);
 
         setTimeout(() => {
             bubble.remove();
-        }, 10000);
+        }, setTimeoutDray);
     };
-
-    setInterval(craetebubble, 300);
+    setInterval(craetebubble, bubbleConcentration);
 });
 
+// 背景の泡その２
+
 window.addEventListener("load", function () {
-    let bubbleContainer2 = document.querySelector(".bubble-container2");
+    if (this.location.pathname === "/") {
+        const bubbleContainer2 = document.getElementById("bubble-container2");
+        const bubbleContainerHeight2 = bubbleContainer2.offsetHeight;
+        const animationDurationInSeconds2 = bubbleContainerHeight2 / 100;
+        const setTimeoutDray2 = bubbleContainerHeight2 * 10;
+        const screenWidth = window.innerWidth;
+        const bubbleConcentration2 = 600 - 0.2 * screenWidth;
 
-    const craetebubble2 = () => {
-        let bubble2 = document.createElement("span");
-        bubble2.className = "bubble2";
+        const craetebubble2 = () => {
+            let bubble2 = document.createElement("span");
+            bubble2.className = "bubble2";
 
-        minSize = 5;
-        maxSize = 15;
+            minSize = 5;
+            maxSize = 15;
 
-        let bubble2Size = Math.random() * (maxSize - minSize) + minSize;
+            let bubbleSize = Math.random() * (maxSize - minSize) + minSize;
 
-        bubble2.style.width = bubble2Size + "px";
-        bubble2.style.height = bubble2Size + "px";
+            bubble2.style.width = bubbleSize + "px";
+            bubble2.style.height = bubbleSize + "px";
+            bubble2.style.left = Math.random() * 100 + "%";
+            bubble2.style.animationDuration = `${animationDurationInSeconds2}s`;
 
-        bubble2.style.left = Math.random() * 100 + "%";
+            bubbleContainer2.appendChild(bubble2);
 
-        bubbleContainer2.appendChild(bubble2);
-
-        setTimeout(() => {
-            bubble2.remove();
-        }, 15000);
-    };
-
-    setInterval(craetebubble2, 300);
+            setTimeout(() => {
+                bubble2.remove();
+            }, setTimeoutDray2);
+        };
+        setInterval(craetebubble2, bubbleConcentration2);
+    }
 });

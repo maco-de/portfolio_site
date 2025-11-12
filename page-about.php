@@ -2,7 +2,7 @@
 
 <main>
     <div class="about">
-        <div class="bubble-container">
+        <div id="bubble-container" class="bubble-container">
             <div class="about__title">
                 <h1>ABOUT</h1>
                 <span>maco-deについて</span>

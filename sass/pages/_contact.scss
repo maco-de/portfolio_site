@@ -3,6 +3,8 @@
 
 .contact {
     background-color: $color-sub;
+    position: relative;
+    z-index: 0;
     &__title {
         height: 300px;
         background-color: $color-white;

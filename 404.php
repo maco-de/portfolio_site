@@ -36,8 +36,10 @@
                 </g>
             </svg>
         </div>
-        <div class="page-404__content">
-            <p>お探しのページは見つかりませんでした</p>
+        <div id="bubble-container" class="bubble-container">
+            <div class="page-404__content">
+                <p>お探しのページは見つかりませんでした</p>
+            </div>
         </div>
         <div class="waves waves_bg-g">
             <svg

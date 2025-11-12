@@ -28,7 +28,7 @@
                 <div class="header__menu__logo">
                     <a class="header__menu__logo__link" href="<?php echo home_url(); ?>">maco-de</a>
                 </div>
-                <div class="hamburger">
+                <div id="hamburger" class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>

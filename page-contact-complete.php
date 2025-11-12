@@ -1,11 +1,11 @@
-<?php
+ContactConfirm or ContactComplete/phpsample<?php
 
-/**
- * ContactConfirm or ContactComplete/php
- * @package sample
- */
+                                            /**
+                                             * ContactConfirm or ContactComplete/php
+                                             * @package sample
+                                             */
 
-?>
+                                            ?>
 
 <?php get_header(); ?>
 
@@ -48,10 +48,12 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <div class="contact__content">
-                <p class=contact__content__text-complete>お問い合わせありがとうございました。<br>担当者よりご連絡させていただきますので、今しばらくお待ちくださいませ。</p>
-                <a class="confirm" href="<?php echo home_url(); ?>">HOMEへ</a>
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <div class="contact__content">
+                    <p class=contact__content__text-complete>お問い合わせありがとうございました。<br>担当者よりご連絡させていただきますので、今しばらくお待ちくださいませ。</p>
+                    <a class="confirm" href="<?php echo home_url(); ?>">HOMEへ</a>
+                </div>
             </div>
         </div>
     </div>

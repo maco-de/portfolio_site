@@ -39,15 +39,17 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <article class="single-works__article">
-                <h1 class="single-works__article__title"><?php the_field('works_title'); ?></h1>
-                <img src="<?php the_field('works_img'); ?>">
-                <p class="single-works__article__sub-title">URL</p>
-                <a href="<?php the_field('works_link'); ?>"><?php the_field('works_link'); ?></a>
-                <p class="single-works__article__sub-title">制作サイトについて</p>
-                <p class="single-works__article__text"><?php the_field('works_text'); ?></p>
-            </article>
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <article class="single-works__article">
+                    <h1 class="single-works__article__title"><?php the_field('works_title'); ?></h1>
+                    <img src="<?php the_field('works_img'); ?>">
+                    <p class="single-works__article__sub-title">URL</p>
+                    <a href="<?php the_field('works_link'); ?>"><?php the_field('works_link'); ?></a>
+                    <p class="single-works__article__sub-title">制作サイトについて</p>
+                    <p class="single-works__article__text"><?php the_field('works_text'); ?></p>
+                </article>
+            </div>
         </div>
     </div>
     <div class="waves waves_bg-g">

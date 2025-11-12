@@ -39,26 +39,28 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <div class="works__content">
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <div class="works__content">
 
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
 
-                        <article class="works__content__article">
-                            <a class="works__content__article__link" href="<?php the_permalink(); ?>">
-                                <img class="works__content__article__link__img" src="<?php the_field('works_img'); ?>" alt="<?php the_field('works_title'); ?>">
-                                <p class="works__content__article__link__title"><?php the_field('works_title'); ?>
-                                    <time class="card_time"><?php the_time('Y.m.d'); ?></time>
-                                </p>
-                            </a>
-                        </article>
+                            <article class="works__content__article">
+                                <a class="works__content__article__link" href="<?php the_permalink(); ?>">
+                                    <img class="works__content__article__link__img" src="<?php the_field('works_img'); ?>" alt="<?php the_field('works_title'); ?>">
+                                    <p class="works__content__article__link__title"><?php the_field('works_title'); ?>
+                                        <time class="card_time"><?php the_time('Y.m.d'); ?></time>
+                                    </p>
+                                </a>
+                            </article>
 
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <p>まだ投稿はありません。</p>
-                <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p>まだ投稿はありません。</p>
+                    <?php endif; ?>
 
+                </div>
             </div>
         </div>
     </div>

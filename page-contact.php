@@ -39,14 +39,16 @@
                 </g>
             </svg>
         </div>
-        <div class="content-width">
-            <div class="contact__content">
-                <p class="contact__content__text">制作の依頼・ご相談などはこちらです。<br>
-                    ご連絡先のお間違えにご注意のうえ、お気軽にお問い合わせくださいませ。
-                </p>
+        <div id="bubble-container" class="bubble-container">
+            <div class="content-width">
+                <div class="contact__content">
+                    <p class="contact__content__text">制作の依頼・ご相談などはこちらです。<br>
+                        ご連絡先のお間違えにご注意のうえ、お気軽にお問い合わせくださいませ。
+                    </p>
 
-                <!-- フォーム -->
-                <?php echo do_shortcode('[contact-form-7 id="ea5bf5b" title="コンタクトフォーム"]'); ?>
+                    <!-- フォーム -->
+                    <?php echo do_shortcode('[contact-form-7 id="ea5bf5b" title="コンタクトフォーム"]'); ?>
+                </div>
             </div>
         </div>
     </div>
