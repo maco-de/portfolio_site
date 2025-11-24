@@ -10,7 +10,7 @@ $(function () {
 
 //　Topへボタン
 $(function () {
-    let pagetop = $(".top");
+    const pagetop = $(".top");
     pagetop.hide();
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -33,9 +33,9 @@ $(function () {
 $(function () {
     $(window).scroll(function () {
         $(".fadein").each(function () {
-            let scroll = $(window).scrollTop();
-            let target = $(this).offset().top;
-            let windowHeight = $(window).height();
+            const scroll = $(window).scrollTop();
+            const target = $(this).offset().top;
+            const windowHeight = $(window).height();
             if (scroll > target - windowHeight + 100) {
                 $(this).css("opacity", "1");
                 $(this).css("transform", "translateY(0)");
@@ -48,9 +48,9 @@ $(function () {
 $(function () {
     $(window).scroll(function () {
         $(".fadein2").each(function () {
-            let scroll = $(window).scrollTop();
-            let target = $(this).offset().top;
-            let windowHeight = $(window).height();
+            const scroll = $(window).scrollTop();
+            const target = $(this).offset().top;
+            const windowHeight = $(window).height();
             if (scroll > target - windowHeight + 100) {
                 $(this).css("opacity", "1");
             }
@@ -62,9 +62,9 @@ $(function () {
 $(function () {
     $(window).scroll(function () {
         $(".fadein_l,.fadein_r").each(function () {
-            let scroll = $(window).scrollTop();
-            let target = $(this).offset().top;
-            let windowHeight = $(window).height();
+            const scroll = $(window).scrollTop();
+            const target = $(this).offset().top;
+            const windowHeight = $(window).height();
             if (scroll > target - windowHeight + 100) {
                 $(this).css("opacity", "1");
                 $(this).css("transform", "translateX(0)");
@@ -112,42 +112,44 @@ $(function () {
 
 // 背景の泡
 
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const bubbleContainer = document.getElementById("bubble-container");
-    const bubbleContainerHeight = bubbleContainer.offsetHeight;
-    const animationDurationInSeconds = bubbleContainerHeight / 100;
-    const setTimeoutDray = bubbleContainerHeight * 10;
-    const screenWidth = window.innerWidth;
-    const bubbleConcentration = 600 - 0.2 * screenWidth;
+    if (bubbleContainer) {
+        const bubbleContainerHeight = bubbleContainer.offsetHeight;
+        const animationDurationInSeconds = bubbleContainerHeight / 100;
+        const setTimeoutDray = bubbleContainerHeight * 10;
+        const screenWidth = window.innerWidth;
+        const bubbleConcentration = 600 - 0.2 * screenWidth;
 
-    const craetebubble = () => {
-        let bubble = document.createElement("span");
-        bubble.className = "bubble";
+        const craetebubble = () => {
+            const bubble = document.createElement("span");
+            bubble.className = "bubble";
 
-        minSize = 5;
-        maxSize = 15;
+            minSize = 5;
+            maxSize = 15;
 
-        let bubbleSize = Math.random() * (maxSize - minSize) + minSize;
+            const bubbleSize = Math.random() * (maxSize - minSize) + minSize;
 
-        bubble.style.width = bubbleSize + "px";
-        bubble.style.height = bubbleSize + "px";
-        bubble.style.left = Math.random() * 100 + "%";
-        bubble.style.animationDuration = `${animationDurationInSeconds}s`;
+            bubble.style.width = bubbleSize + "px";
+            bubble.style.height = bubbleSize + "px";
+            bubble.style.left = Math.random() * 100 + "%";
+            bubble.style.animationDuration = `${animationDurationInSeconds}s`;
 
-        bubbleContainer.appendChild(bubble);
+            bubbleContainer.appendChild(bubble);
 
-        setTimeout(() => {
-            bubble.remove();
-        }, setTimeoutDray);
-    };
-    setInterval(craetebubble, bubbleConcentration);
+            setTimeout(() => {
+                bubble.remove();
+            }, setTimeoutDray);
+        };
+        setInterval(craetebubble, bubbleConcentration);
+    }
 });
 
 // 背景の泡その２
 
-window.addEventListener("load", function () {
-    if (this.location.pathname === "/") {
-        const bubbleContainer2 = document.getElementById("bubble-container2");
+document.addEventListener("DOMContentLoaded", function () {
+    const bubbleContainer2 = document.getElementById("bubble-container2");
+    if (bubbleContainer2) {
         const bubbleContainerHeight2 = bubbleContainer2.offsetHeight;
         const animationDurationInSeconds2 = bubbleContainerHeight2 / 100;
         const setTimeoutDray2 = bubbleContainerHeight2 * 10;
@@ -155,13 +157,13 @@ window.addEventListener("load", function () {
         const bubbleConcentration2 = 600 - 0.2 * screenWidth;
 
         const craetebubble2 = () => {
-            let bubble2 = document.createElement("span");
+            const bubble2 = document.createElement("span");
             bubble2.className = "bubble2";
 
             minSize = 5;
             maxSize = 15;
 
-            let bubbleSize = Math.random() * (maxSize - minSize) + minSize;
+            const bubbleSize = Math.random() * (maxSize - minSize) + minSize;
 
             bubble2.style.width = bubbleSize + "px";
             bubble2.style.height = bubbleSize + "px";
